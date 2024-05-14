@@ -1,0 +1,3 @@
+class DataUser:
+    LOGIN_DEMO_ORGANIZER_ONE = 'o1s1'
+    PASSWORD_DEMO_ORGANIZER_ONE = 'guess'
