@@ -1,9 +1,8 @@
-from selenium.common import NoSuchElementException
-
 from base.base_page import BasePage
 from configs.links import Links
 from configs.data import DataUser
 from locators.locators_main_page import LocatorsMainPage
+
 
 class MainPage(BasePage):
     def __init__(self, driver):
@@ -15,10 +14,3 @@ class MainPage(BasePage):
         self.enter_text(LocatorsMainPage.FIELD_LOGIN, DataUser.LOGIN_DEMO_ORGANIZER_ONE)
         self.enter_text(LocatorsMainPage.FIELD_PASSWORD, DataUser.PASSWORD_DEMO_ORGANIZER_ONE)
         self.click_on_element(LocatorsMainPage.BUTTON_NEXT)
-
-    def check(self):
-        try:
-            self.find_element(LocatorsMainPage.LOGO_USER)
-            return True
-        except NoSuchElementException:
-            return False

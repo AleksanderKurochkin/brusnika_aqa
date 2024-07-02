@@ -11,3 +11,4 @@ class LocatorsMainPage:
                             'mat-button-base"]')
 
     LOGO_USER = ("xpath", '//a[@id="user"]')
+
