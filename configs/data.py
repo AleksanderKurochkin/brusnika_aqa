@@ -1,5 +1,6 @@
 class DataUser:
-    LOGIN_DEMO_ORGANIZER_ONE = 'o1s1'
+    LOGIN_ORGANIZER_ONE_QA = 'o1s1'
+    LOGIN_ORGANIZER_ONE_DEMO = 'balin.p@brusnika.ru'
     PASSWORD_DEMO_ORGANIZER_ONE = 'guess'
 
 

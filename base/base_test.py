@@ -1,5 +1,5 @@
 from pages.main_page import MainPage
-from pages.page_trade_creation import TradeCreationPage
+from pages.trade_creation_page import TradeCreationPage
 import pytest
 
 
