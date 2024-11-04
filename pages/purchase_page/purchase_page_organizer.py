@@ -4,8 +4,8 @@ from base.base_page import BasePage
 import allure
 
 class PurchasePageOrganizer(BasePage):
-    _PAGE_URL = None
-    # _PAGE_URL = ("https://brusnika-qa.demo.ultimeta.ru/trades/100808559")
+    # _PAGE_URL = None
+    _PAGE_URL = ("https://brusnika-qa.demo.ultimeta.ru/trades/100808934/info")
 
     _BUTTON_RESULT = "//span[text() = 'Подвести итоги']"
     _BUTTON_EDIT_PURCHASE = "//span[text() = 'Внести изменения']"
