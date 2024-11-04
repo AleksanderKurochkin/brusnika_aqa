@@ -42,7 +42,7 @@ class TestPurchaseGood(BaseTest):
         self.purchase_page_organizer.click_button_statement()
         self.purchase_page_organizer.click_button_choose_winner()
         self.purchase_page_organizer.choose_winner()
-        time.sleep(10)
+        time.sleep(0)
 
 
 
