@@ -1,0 +1,3426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="91476c5e-2001-4ba3-ac62-e94eed6f4cb3" activeEnvironment="Default" name="brusnika-1c" resourceRoot="" soapui-version="5.7.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="862aa1b2-be0b-48a5-b8ca-52f79a9de573" wsaVersion="NONE" name="integrationPortSoap11" type="wsdl" bindingName="{http://ultimeta.ru/schemas/brusnika-1c-ws}integrationPortSoap11" soapVersion="1_1" anonymous="optional" definition="https://brusnika.demo.ultimeta.ru/ws/brusnika-1c/brusnika-1c.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://brusnika.demo.ultimeta.ru/ws/brusnika-1c/brusnika-1c.wsdl"><con:part><con:url>https://brusnika.demo.ultimeta.ru/ws/brusnika-1c/brusnika-1c.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://ultimeta.ru/schemas/brusnika-1c-ws" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:brusnika-1c="http://ultimeta.ru/schemas/brusnika-1c" xmlns:brusnika-1c-ws="http://ultimeta.ru/schemas/brusnika-1c-ws" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://ultimeta.ru/schemas/brusnika-1c-ws" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://ultimeta.ru/schemas/brusnika-1c" schemaLocation="schema-brusnika-1c.xsd"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="UploadWorksTenderRequest">
+    <wsdl:part element="brusnika-1c:UploadWorksTenderRequest" name="UploadWorksTenderRequest"/>
+  </wsdl:message>
+  <wsdl:message name="UploadWorksTenderResponse">
+    <wsdl:part element="brusnika-1c:UploadTenderResponse" name="UploadWorksTenderResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetWorksTenderProtocolRequest">
+    <wsdl:part element="brusnika-1c:GetWorksTenderProtocolRequest" name="GetWorksTenderProtocolRequest"/>
+  </wsdl:message>
+  <wsdl:message name="GetWorksTenderProtocolResponse">
+    <wsdl:part element="brusnika-1c:GetWorksTenderProtocolResponse" name="GetWorksTenderProtocolResponse"/>
+  </wsdl:message>
+  <wsdl:message name="UploadGoodsTenderRequest">
+    <wsdl:part element="brusnika-1c:UploadGoodsTenderRequest" name="UploadGoodsTenderRequest"/>
+  </wsdl:message>
+  <wsdl:message name="UploadGoodsTenderResponse">
+    <wsdl:part element="brusnika-1c:UploadTenderResponse" name="UploadGoodsTenderResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetGoodsTenderProtocolRequest">
+    <wsdl:part element="brusnika-1c:GetGoodsTenderProtocolRequest" name="GetGoodsTenderProtocolRequest"/>
+  </wsdl:message>
+  <wsdl:message name="GetGoodsTenderProtocolResponse">
+    <wsdl:part element="brusnika-1c:GetGoodsTenderProtocolResponse" name="GetGoodsTenderProtocolResponse"/>
+  </wsdl:message>
+  <wsdl:message name="UploadNominatedMaterialsPricesRequest">
+    <wsdl:part element="brusnika-1c:UploadNominatedMaterialsPricesRequest" name="UploadNominatedMaterialsPricesRequest"/>
+  </wsdl:message>
+  <wsdl:message name="UploadNominatedMaterialsPricesResponse">
+    <wsdl:part element="brusnika-1c:Response" name="UploadNominatedMaterialsPricesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="UploadLotCancelDecisionRequest">
+    <wsdl:part element="brusnika-1c:UploadLotCancelDecisionRequest" name="UploadLotCancelDecisionRequest"/>
+  </wsdl:message>
+  <wsdl:message name="UploadLotCancelDecisionResponse">
+    <wsdl:part element="brusnika-1c:Response" name="UploadLotCancelDecisionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetLotCancelDecisionRequest">
+    <wsdl:part element="brusnika-1c:GetLotCancelDecisionRequest" name="GetLotCancelDecisionRequest"/>
+  </wsdl:message>
+  <wsdl:message name="GetLotCancelDecisionResponse">
+    <wsdl:part element="brusnika-1c:GetLotCancelDecisionResponse" name="GetLotCancelDecisionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetMessagesRequest">
+    <wsdl:part element="brusnika-1c:GetMessagesRequest" name="GetMessagesRequest"/>
+  </wsdl:message>
+  <wsdl:message name="GetMessagesResponse">
+    <wsdl:part element="brusnika-1c:GetMessagesResponse" name="GetMessagesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="UploadMessageProcessingStatusRequest">
+    <wsdl:part element="brusnika-1c:UploadMessageProcessingStatusRequest" name="UploadMessageProcessingStatusRequest"/>
+  </wsdl:message>
+  <wsdl:message name="UploadMessageProcessingStatusResponse">
+    <wsdl:part element="brusnika-1c:Response" name="UploadMessageProcessingStatusResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetDocumentRequest">
+    <wsdl:part element="brusnika-1c:GetDocumentRequest" name="GetDocumentRequest"/>
+  </wsdl:message>
+  <wsdl:message name="GetDocumentResponse">
+    <wsdl:part element="brusnika-1c:GetDocumentResponse" name="GetDocumentResponse"/>
+  </wsdl:message>
+  <wsdl:message name="UploadDocumentRequest">
+    <wsdl:part element="brusnika-1c:UploadDocumentRequest" name="UploadDocumentRequest"/>
+  </wsdl:message>
+  <wsdl:message name="UploadDocumentResponse">
+    <wsdl:part element="brusnika-1c:UploadDocumentResponse" name="UploadDocumentResponse"/>
+  </wsdl:message>
+  <wsdl:message name="UploadProcurementClassifierRequest">
+    <wsdl:part element="brusnika-1c:UploadProcurementClassifierRequest" name="UploadProcurementClassifierRequest"/>
+  </wsdl:message>
+  <wsdl:message name="UploadProcurementClassifierResponse">
+    <wsdl:part element="brusnika-1c:Response" name="UploadProcurementClassifierResponse"/>
+  </wsdl:message>
+  <wsdl:message name="UploadProductClassifierRequest">
+    <wsdl:part element="brusnika-1c:UploadProductClassifierRequest" name="UploadProductClassifierRequest"/>
+  </wsdl:message>
+  <wsdl:message name="UploadProductClassifierResponse">
+    <wsdl:part element="brusnika-1c:Response" name="UploadProductClassifierResponse"/>
+  </wsdl:message>
+  <wsdl:message name="UploadWorkTypesRequest">
+    <wsdl:part element="brusnika-1c:UploadWorkTypesRequest" name="UploadWorkTypesRequest"/>
+  </wsdl:message>
+  <wsdl:message name="UploadWorkTypesResponse">
+    <wsdl:part element="brusnika-1c:Response" name="UploadWorkTypesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="UploadProjectClassifierRequest">
+    <wsdl:part element="brusnika-1c:UploadProjectClassifierRequest" name="UploadProjectClassifierRequest"/>
+  </wsdl:message>
+  <wsdl:message name="UploadProjectClassifierResponse">
+    <wsdl:part element="brusnika-1c:Response" name="UploadProjectClassifierResponse"/>
+  </wsdl:message>
+  <wsdl:message name="UploadUnitsRequest">
+    <wsdl:part element="brusnika-1c:UploadUnitsRequest" name="UploadUnitsRequest"/>
+  </wsdl:message>
+  <wsdl:message name="UploadUnitsResponse">
+    <wsdl:part element="brusnika-1c:Response" name="UploadUnitsResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="integrationPort">
+    <wsdl:operation name="UploadWorksTender">
+      <wsdl:input message="brusnika-1c-ws:UploadWorksTenderRequest" name="UploadWorksTenderRequest"/>
+      <wsdl:output message="brusnika-1c-ws:UploadWorksTenderResponse" name="UploadWorksTenderResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorksTenderProtocol">
+      <wsdl:input message="brusnika-1c-ws:GetWorksTenderProtocolRequest" name="GetWorksTenderProtocolRequest"/>
+      <wsdl:output message="brusnika-1c-ws:GetWorksTenderProtocolResponse" name="GetWorksTenderProtocolResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="UploadGoodsTender">
+      <wsdl:input message="brusnika-1c-ws:UploadGoodsTenderRequest" name="UploadGoodsTenderRequest"/>
+      <wsdl:output message="brusnika-1c-ws:UploadGoodsTenderResponse" name="UploadGoodsTenderResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetGoodsTenderProtocol">
+      <wsdl:input message="brusnika-1c-ws:GetGoodsTenderProtocolRequest" name="GetGoodsTenderProtocolRequest"/>
+      <wsdl:output message="brusnika-1c-ws:GetGoodsTenderProtocolResponse" name="GetGoodsTenderProtocolResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="UploadNominatedMaterialsPrices">
+      <wsdl:input message="brusnika-1c-ws:UploadNominatedMaterialsPricesRequest" name="UploadNominatedMaterialsPricesRequest"/>
+      <wsdl:output message="brusnika-1c-ws:UploadNominatedMaterialsPricesResponse" name="UploadNominatedMaterialsPricesResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="UploadLotCancelDecision">
+      <wsdl:input message="brusnika-1c-ws:UploadLotCancelDecisionRequest" name="UploadLotCancelDecisionRequest"/>
+      <wsdl:output message="brusnika-1c-ws:UploadLotCancelDecisionResponse" name="UploadLotCancelDecisionResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetLotCancelDecision">
+      <wsdl:input message="brusnika-1c-ws:GetLotCancelDecisionRequest" name="GetLotCancelDecisionRequest"/>
+      <wsdl:output message="brusnika-1c-ws:GetLotCancelDecisionResponse" name="GetLotCancelDecisionResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessages">
+      <wsdl:input message="brusnika-1c-ws:GetMessagesRequest" name="GetMessagesRequest"/>
+      <wsdl:output message="brusnika-1c-ws:GetMessagesResponse" name="GetMessagesResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="UploadMessageProcessingStatus">
+      <wsdl:input message="brusnika-1c-ws:UploadMessageProcessingStatusRequest" name="UploadMessageProcessingStatusRequest"/>
+      <wsdl:output message="brusnika-1c-ws:UploadMessageProcessingStatusResponse" name="UploadMessageProcessingStatusResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocument">
+      <wsdl:input message="brusnika-1c-ws:GetDocumentRequest" name="GetDocumentRequest"/>
+      <wsdl:output message="brusnika-1c-ws:GetDocumentResponse" name="GetDocumentResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocument">
+      <wsdl:input message="brusnika-1c-ws:UploadDocumentRequest" name="UploadDocumentRequest"/>
+      <wsdl:output message="brusnika-1c-ws:UploadDocumentResponse" name="UploadDocumentResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="UploadProcurementClassifier">
+      <wsdl:input message="brusnika-1c-ws:UploadProcurementClassifierRequest" name="UploadProcurementClassifierRequest"/>
+      <wsdl:output message="brusnika-1c-ws:UploadProcurementClassifierResponse" name="UploadProcurementClassifierResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="UploadProductClassifier">
+      <wsdl:input message="brusnika-1c-ws:UploadProductClassifierRequest" name="UploadProductClassifierRequest"/>
+      <wsdl:output message="brusnika-1c-ws:UploadProductClassifierResponse" name="UploadProductClassifierResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="UploadWorkTypes">
+      <wsdl:input message="brusnika-1c-ws:UploadWorkTypesRequest" name="UploadWorkTypesRequest"/>
+      <wsdl:output message="brusnika-1c-ws:UploadWorkTypesResponse" name="UploadWorkTypesResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="UploadProjectClassifier">
+      <wsdl:input message="brusnika-1c-ws:UploadProjectClassifierRequest" name="UploadProjectClassifierRequest"/>
+      <wsdl:output message="brusnika-1c-ws:UploadProjectClassifierResponse" name="UploadProjectClassifierResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="UploadUnits">
+      <wsdl:input message="brusnika-1c-ws:UploadUnitsRequest" name="UploadUnitsRequest"/>
+      <wsdl:output message="brusnika-1c-ws:UploadUnitsResponse" name="UploadUnitsResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="integrationPortSoap11" type="brusnika-1c-ws:integrationPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="UploadWorksTender">
+      <wsdl:documentation>Передача из 1С черновика тендера СМР</wsdl:documentation>
+      <soap:operation soapAction=""/>
+      <wsdl:input name="UploadWorksTenderRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="UploadWorksTenderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorksTenderProtocol">
+      <wsdl:documentation>Получение из ЭТП протокола итогов тендера СМР по завершенным лотам</wsdl:documentation>
+      <soap:operation soapAction=""/>
+      <wsdl:input name="GetWorksTenderProtocolRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetWorksTenderProtocolResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadGoodsTender">
+      <wsdl:documentation>Передача из 1С черновика тендера ТМЦ</wsdl:documentation>
+      <soap:operation soapAction=""/>
+      <wsdl:input name="UploadGoodsTenderRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="UploadGoodsTenderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGoodsTenderProtocol">
+      <wsdl:documentation>Получение из ЭТП протокола итогов тендера ТМЦ</wsdl:documentation>
+      <soap:operation soapAction=""/>
+      <wsdl:input name="GetGoodsTenderProtocolRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetGoodsTenderProtocolResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadNominatedMaterialsPrices">
+      <wsdl:documentation>Загрузка расчетных цен по номинированным материалам</wsdl:documentation>
+      <soap:operation soapAction=""/>
+      <wsdl:input name="UploadNominatedMaterialsPricesRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="UploadNominatedMaterialsPricesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadLotCancelDecision">
+      <wsdl:documentation>Передача из 1С сведений об отмене лота тендера</wsdl:documentation>
+      <soap:operation soapAction=""/>
+      <wsdl:input name="UploadLotCancelDecisionRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="UploadLotCancelDecisionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLotCancelDecision">
+      <wsdl:documentation>Получение в 1С сведений об отмене лота тендера</wsdl:documentation>
+      <soap:operation soapAction=""/>
+      <wsdl:input name="GetLotCancelDecisionRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetLotCancelDecisionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessages">
+      <wsdl:documentation>Получение очереди сообщений</wsdl:documentation>
+      <soap:operation soapAction=""/>
+      <wsdl:input name="GetMessagesRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetMessagesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadMessageProcessingStatus">
+      <wsdl:documentation>Отчёт о результатах обработки сообщения</wsdl:documentation>
+      <soap:operation soapAction=""/>
+      <wsdl:input name="UploadMessageProcessingStatusRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="UploadMessageProcessingStatusResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocument">
+      <wsdl:documentation>Получение файла с ЭТП</wsdl:documentation>
+      <soap:operation soapAction=""/>
+      <wsdl:input name="GetDocumentRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetDocumentResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDocument">
+      <wsdl:documentation>Загрузка файла на ЭТП</wsdl:documentation>
+      <soap:operation soapAction=""/>
+      <wsdl:input name="UploadDocumentRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="UploadDocumentResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadProcurementClassifier">
+      <wsdl:documentation>Передача из 1С изменений к классификатору номенклатурных групп (специализаций)</wsdl:documentation>
+      <soap:operation soapAction=""/>
+      <wsdl:input name="UploadProcurementClassifierRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="UploadProcurementClassifierResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadProductClassifier">
+      <wsdl:documentation>Передача из 1С изменений к классификатору единичных номенклатур материалов</wsdl:documentation>
+      <soap:operation soapAction=""/>
+      <wsdl:input name="UploadProductClassifierRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="UploadProductClassifierResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadWorkTypes">
+      <wsdl:documentation>Передача из 1С изменений к классификатору единичных видов работ</wsdl:documentation>
+      <soap:operation soapAction=""/>
+      <wsdl:input name="UploadWorkTypesRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="UploadWorkTypesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadProjectClassifier">
+      <wsdl:documentation>Передача из 1С изменений к классификатору объектов работ (проектов)</wsdl:documentation>
+      <soap:operation soapAction=""/>
+      <wsdl:input name="UploadProjectClassifierRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="UploadProjectClassifierResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadUnits">
+      <wsdl:documentation>Передача из 1С изменений к классификатору единиц измерения</wsdl:documentation>
+      <soap:operation soapAction=""/>
+      <wsdl:input name="UploadUnitsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="UploadUnitsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="integrationPortService">
+    <wsdl:port binding="brusnika-1c-ws:integrationPortSoap11" name="integrationPortSoap11">
+      <soap:address location="https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>https://brusnika.demo.ultimeta.ru/ws/brusnika-1c/schema-brusnika-1c.xsd</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://ultimeta.ru/schemas/brusnika-1c" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:brusnika-1c="http://ultimeta.ru/schemas/brusnika-1c">
+  <xs:include schemaLocation="trades.xsd"/>
+  <xs:include schemaLocation="messages.xsd"/>
+  <xs:include schemaLocation="classifiers.xsd"/>
+  <xs:include schemaLocation="documents.xsd"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://brusnika.demo.ultimeta.ru/ws/brusnika-1c/trades.xsd</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://ultimeta.ru/schemas/brusnika-1c" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:brusnika-1c="http://ultimeta.ru/schemas/brusnika-1c">
+  <xs:include schemaLocation="common-types.xsd"/>
+  <xs:element name="UploadWorksTenderRequest">
+    <xs:annotation>
+      <xs:documentation>Создание тендера СМР</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="brusnika-1c:Request">
+          <xs:sequence>
+            <xs:element minOccurs="1" name="tenderId" type="brusnika-1c:ExternalId">
+              <xs:annotation>
+                <xs:documentation>Идентификатор тендера в 1С</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="1" name="registeredNumber" type="brusnika-1c:notEmptyToken">
+              <xs:annotation>
+                <xs:documentation>Реестровый номер тендера в 1С</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="1" name="emailOrganizer" type="brusnika-1c:Email">
+              <xs:annotation>
+                <xs:documentation>Емейл ответственного по закупкам</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="1" name="title" type="brusnika-1c:notEmptyString">
+              <xs:annotation>
+                <xs:documentation>Наименование тендера</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="1" name="currencyCode" type="brusnika-1c:notEmptyToken">
+              <xs:annotation>
+                <xs:documentation>Код валюты по справочнику</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="1" name="vatType" type="brusnika-1c:VatType">
+              <xs:annotation>
+                <xs:documentation>Базис НДС, в котором подаются предложения</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="notes" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Комментарий</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="lots">
+              <xs:annotation>
+                <xs:documentation>Сведения по лотам</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="lot" type="brusnika-1c:WorksLot"/>
+                </xs:sequence>
+              </xs:complexType>
+              <xs:unique name="uniqueWorksTenderLotId">
+                <xs:selector xpath="brusnika-1c:lot"/>
+                <xs:field xpath="brusnika-1c:id"/>
+              </xs:unique>
+            </xs:element>
+            <xs:element minOccurs="0" name="otherAttachmentIds">
+              <xs:annotation>
+                <xs:documentation>Идентификаторы прочих документов</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="otherAttachmentId" type="brusnika-1c:EtpId"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="modificationReason" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Обоснование внесения изменений</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="WorksLot">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="id" type="brusnika-1c:ExternalId">
+        <xs:annotation>
+          <xs:documentation>Интеграционный идентификатор лота в 1С</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="registeredNumber" type="brusnika-1c:notEmptyToken">
+        <xs:annotation>
+          <xs:documentation>Реестровый номер заявки (лота) в 1С</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="title" type="brusnika-1c:notEmptyString">
+        <xs:annotation>
+          <xs:documentation>Наименование лота</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="initialContractPrice" type="brusnika-1c:PositiveMoney">
+        <xs:annotation>
+          <xs:documentation>Расчетная стоимость лота</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="description" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Описание предмета лота</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="projectClassifierCode" type="xs:token">
+        <xs:annotation>
+          <xs:documentation>Код в классификаторе объектов строительства</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="procurementClassifierCode" type="xs:token">
+        <xs:annotation>
+          <xs:documentation>Код категорий закупки</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="executionPeriod" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Срок выполнения работ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="guaranteePeriodReserveAssurance" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Обеспечение суммы резерва на гарантийный период</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="guaranteePeriod" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Гарантийный период</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="generalContractingPercentage" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Генподрядный процент</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="enablePricePerPurchaseItem" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Указать расчетную стоимость по позициям</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="paymentTermsType" type="brusnika-1c:WorksPaymentStageType">
+        <xs:annotation>
+          <xs:documentation>Форма задания условий оплаты</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:sequence minOccurs="0">
+        <xs:element minOccurs="1" name="allowPaymentStagesInBid" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Применимо только для paymentTermsType = MULTISTAGE_PAYMENT_BY_ORGANIZER. Поставщик может предложить свои условия оплаты</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="1" name="paymentStagesPercentsInTrade" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Применимо только для paymentTermsType = MULTISTAGE_PAYMENT_BY_ORGANIZER. Если требуется задать процент выплат по заявленным условиям оплаты, TRUE, иначе FALSE</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="1" name="paymentStagesPeriodInTrade" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Применимо только для paymentTermsType = MULTISTAGE_PAYMENT_BY_ORGANIZER. Если требуется задать сроки выплат по заявленным условиям оплаты, TRUE, иначе FALSE</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="1" name="paymentStages">
+          <xs:annotation>
+            <xs:documentation>Применимо только для paymentTermsType = MULTISTAGE_PAYMENT_BY_ORGANIZER. Многоэтапные условия оплаты</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="paymentStage" type="brusnika-1c:WorksPaymentStage"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:element minOccurs="0" name="worksPurchaseItems">
+        <xs:annotation>
+          <xs:documentation>Ведомость работ к лоту (для СМР)</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="worksPurchaseItem" type="brusnika-1c:WorksPurchaseItem"/>
+          </xs:sequence>
+        </xs:complexType>
+        <xs:unique name="uniqueWorksPurchaseItemId">
+          <xs:selector xpath="brusnika-1c:worksPurchaseItem"/>
+          <xs:field xpath="brusnika-1c:id"/>
+        </xs:unique>
+      </xs:element>
+      <xs:element minOccurs="0" name="contractDraftAttachmentIds">
+        <xs:annotation>
+          <xs:documentation>Идентификаторы файлов проекта договора</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="contractDraftAttachmentId" type="brusnika-1c:EtpId"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="technicalSpecificationAttachmentIds">
+        <xs:annotation>
+          <xs:documentation>Идентификаторы файлов технического задания</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="technicalSpecificationAttachmentId" type="brusnika-1c:EtpId"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="projectDocumentationAttachmentIds">
+        <xs:annotation>
+          <xs:documentation>Идентификаторы файлов проектной документации</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="projectDocumentationAttachmentId" type="brusnika-1c:EtpId"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="workScheduleAttachmentIds">
+        <xs:annotation>
+          <xs:documentation>Идентификаторы файлов графика выполнения работ</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="workScheduleAttachmentId" type="brusnika-1c:EtpId"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="otherAttachmentIds">
+        <xs:annotation>
+          <xs:documentation>Идентификаторы прочих документов</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="otherAttachmentId" type="brusnika-1c:EtpId"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="WorksPaymentStageType">
+    <xs:annotation>
+      <xs:documentation>Форма задания условий оплаты</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="brusnika-1c:notEmptyToken">
+      <xs:enumeration value="MULTISTAGE_PAYMENT_BY_ORGANIZER">
+        <xs:annotation>
+          <xs:documentation>Многоэтапные условия выплат (задаются организатором)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MULTISTAGE_PAYMENT_BY_PARTICIPANT">
+        <xs:annotation>
+          <xs:documentation>Многоэтапные условия выплат (задаются участником)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="WorksPurchaseItem">
+    <xs:annotation>
+      <xs:documentation>Позиция ведомости работ к лоту для тендера СМР</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice>
+        <xs:sequence minOccurs="1">
+          <xs:element minOccurs="1" name="sectionNumber" type="brusnika-1c:notEmptyString">
+            <xs:annotation>
+              <xs:documentation>код раздела сметы</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="1" name="sectionTitle" type="brusnika-1c:notEmptyString">
+            <xs:annotation>
+              <xs:documentation>наименование раздела сметы</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:sequence minOccurs="1">
+          <xs:element minOccurs="1" name="id" type="brusnika-1c:ExternalId">
+            <xs:annotation>
+              <xs:documentation>идентификатор позиции ведомости в 1С</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="workTypeCode" type="xs:token">
+            <xs:annotation>
+              <xs:documentation>код из справочника видов работ</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="productClassifierCode" type="xs:token">
+            <xs:annotation>
+              <xs:documentation>код из справочника материалов</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="1" name="quantity" type="brusnika-1c:NonNegativeDecimal">
+            <xs:annotation>
+              <xs:documentation>Количество</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="1" name="unitCode" type="brusnika-1c:notEmptyToken">
+            <xs:annotation>
+              <xs:documentation>Код справочника единиц измерения</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="consumptionRate" type="xs:decimal">
+            <xs:annotation>
+              <xs:documentation>Норма расхода</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="initialWorksPrice" type="brusnika-1c:Money">
+            <xs:annotation>
+              <xs:documentation>Расчетная стоимость работ</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="1" name="fixWorksPrice" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>Признак фиксации стоимости работ</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="initialGoodsPrice" type="brusnika-1c:Money">
+            <xs:annotation>
+              <xs:documentation>Расчетная стоимость материалов</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="1" name="fixGoodsPrice" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>Признак фиксации стоимости материалов</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:choice>
+      <xs:element minOccurs="0" name="comment" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Комментарий организатора</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UploadTenderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" name="success" type="xs:boolean"/>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="criticalErrors" type="brusnika-1c:notEmptyString">
+          <xs:annotation>
+            <xs:documentation>информация о критических ошибках</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="errors">
+          <xs:annotation>
+            <xs:documentation>информация об ошибках</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="error" type="brusnika-1c:notEmptyString"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="siteReference" type="brusnika-1c:SiteReference">
+          <xs:annotation>
+            <xs:documentation>id и url созданного тендера на ЭТП</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadGoodsTenderRequest">
+    <xs:annotation>
+      <xs:documentation>Создание черновика тендера ТМЦ (попозиционный запрос предложений)</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="brusnika-1c:Request">
+          <xs:sequence>
+            <xs:element minOccurs="1" name="tenderId" type="brusnika-1c:ExternalId">
+              <xs:annotation>
+                <xs:documentation>Идентификатор закупки в 1С</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="1" name="registeredNumber" type="brusnika-1c:notEmptyString">
+              <xs:annotation>
+                <xs:documentation>Номер закупки в 1С</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="1" name="title" type="brusnika-1c:notEmptyString">
+              <xs:annotation>
+                <xs:documentation>Наименование закупки</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="1" name="emailOrganizer" type="brusnika-1c:Email">
+              <xs:annotation>
+                <xs:documentation>Емейл организатора</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="1" name="vatType" type="brusnika-1c:VatType">
+              <xs:annotation>
+                <xs:documentation>Применение НДС при подаче предложения</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="1" name="currencyCode" type="brusnika-1c:notEmptyToken">
+              <xs:annotation>
+                <xs:documentation>Валюта</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="1" name="lots">
+              <xs:annotation>
+                <xs:documentation>Лоты</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="lot" type="brusnika-1c:GoodsLot"/>
+                </xs:sequence>
+              </xs:complexType>
+              <xs:unique name="uniqueGoodsTenderLotId">
+                <xs:selector xpath="brusnika-1c:lot"/>
+                <xs:field xpath="brusnika-1c:id"/>
+              </xs:unique>
+            </xs:element>
+            <xs:element minOccurs="0" name="notes" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Примечания</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="otherAttachmentIds">
+              <xs:annotation>
+                <xs:documentation>Идентификаторы файлов "Дополнительная документация"</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="otherAttachmentId" type="brusnika-1c:EtpId"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="modificationReason" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Обоснование внесения изменений</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GoodsLot">
+    <xs:annotation>
+      <xs:documentation>Лот ТМЦ</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="1" name="id" type="brusnika-1c:ExternalId">
+        <xs:annotation>
+          <xs:documentation>Идентификатор лота в 1С</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="registeredNumber" type="brusnika-1c:notEmptyToken">
+        <xs:annotation>
+          <xs:documentation>Номер заявки (лота) в 1С</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="title" type="brusnika-1c:notEmptyString">
+        <xs:annotation>
+          <xs:documentation>Наименование лота</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="projectClassifierCode" type="xs:token">
+        <xs:annotation>
+          <xs:documentation>Код в классификаторе объектов строительства</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="procurementClassifierCode" type="xs:token">
+        <xs:annotation>
+          <xs:documentation>Код категорий закупки</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="enablePricePerPurchaseItem" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Признак указания расчетных цен по позициям. Если ДА, то в спецификацию поставки
+						указываются цены за ед.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="paymentTermsType" type="brusnika-1c:GoodsPaymentStageType">
+        <xs:annotation>
+          <xs:documentation>Форма задания условий оплаты</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:sequence minOccurs="0">
+        <xs:element minOccurs="1" name="paymentDelayTerms" type="brusnika-1c:notEmptyString">
+          <xs:annotation>
+            <xs:documentation>Условия отсрочки</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="1" name="allowPaymentDelayTermsInBid" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Применимо только для paymentTermsType = DELAYED_PAYMENT. Поставщик может предложить свои условия отсрочки</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+      <xs:sequence minOccurs="0">
+        <xs:element minOccurs="1" name="allowPaymentStagesInBid" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Применимо только для paymentTermsType = MULTISTAGE_PAYMENT_BY_ORGANIZER. Поставщик может предложить свои условия оплаты</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="1" name="paymentStagesPercentsInTrade" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Применимо только для paymentTermsType = MULTISTAGE_PAYMENT_BY_ORGANIZER. Если требуется задать процент выплат по заявленным условиям оплаты, TRUE, иначе FALSE</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="1" name="paymentStagesPeriodInTrade" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Применимо только для paymentTermsType = MULTISTAGE_PAYMENT_BY_ORGANIZER. Если требуется задать сроки выплат по заявленным условиям оплаты, TRUE, иначе FALSE</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="1" name="paymentStages">
+          <xs:annotation>
+            <xs:documentation>Применимо только для paymentTermsType = MULTISTAGE_PAYMENT_BY_ORGANIZER. Многоэтапные условия оплаты</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="paymentStage" type="brusnika-1c:PaymentStage"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:element minOccurs="1" name="goodsPurchaseItems">
+        <xs:annotation>
+          <xs:documentation>Спецификация лота</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="goodsPurchaseItem" type="brusnika-1c:GoodsPurchaseItem"/>
+          </xs:sequence>
+        </xs:complexType>
+        <xs:unique name="uniqueGoodsPurchaseItemId">
+          <xs:selector xpath="brusnika-1c:goodsPurchaseItem"/>
+          <xs:field xpath="brusnika-1c:id"/>
+        </xs:unique>
+      </xs:element>
+      <xs:element minOccurs="0" name="otherAttachmentIds">
+        <xs:annotation>
+          <xs:documentation>Идентификаторы файлов "Дополнительная документация"</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="otherAttachmentId" type="brusnika-1c:EtpId"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="GoodsPaymentStageType">
+    <xs:annotation>
+      <xs:documentation>Форма задания условий оплаты в ТМЦ</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="brusnika-1c:notEmptyToken">
+      <xs:enumeration value="PREPAYMENT">
+        <xs:annotation>
+          <xs:documentation>Единовременный аванс</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DELAYED_PAYMENT">
+        <xs:annotation>
+          <xs:documentation>Отсрочка платежа</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MULTISTAGE_PAYMENT_BY_ORGANIZER">
+        <xs:annotation>
+          <xs:documentation>Многоэтапные условия выплат (задаются организатором)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MULTISTAGE_PAYMENT_BY_PARTICIPANT">
+        <xs:annotation>
+          <xs:documentation>Многоэтапные условия выплат (задаются участником)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="GoodsPurchaseItem">
+    <xs:annotation>
+      <xs:documentation>Позиция спецификации лота ТМЦ</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="1" name="id" type="brusnika-1c:ExternalId">
+        <xs:annotation>
+          <xs:documentation>Идентификатор позиции</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="productClassifierCode" type="xs:token">
+        <xs:annotation>
+          <xs:documentation>код из справочника материалов</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="characteristics" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Характеристики</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="quantity" type="brusnika-1c:NonNegativeDecimal">
+        <xs:annotation>
+          <xs:documentation>Количество</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="unitCode" type="brusnika-1c:notEmptyToken">
+        <xs:annotation>
+          <xs:documentation>Код справочника ед. изм.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="price" type="brusnika-1c:NonNegativeDecimal">
+        <xs:annotation>
+          <xs:documentation>Цена за единицу</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="deliveryPeriod" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Срок поставки</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="comment" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Комментарий организатора</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SiteReference">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="id" type="brusnika-1c:EtpId">
+        <xs:annotation>
+          <xs:documentation>id на площадке</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="url" type="brusnika-1c:notEmptyString">
+        <xs:annotation>
+          <xs:documentation>url на площадке</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetWorksTenderProtocolRequest">
+    <xs:annotation>
+      <xs:documentation>Получение результатов проведения тендера на работы, услуги</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="brusnika-1c:Request">
+          <xs:sequence>
+            <xs:element minOccurs="1" name="messageId" type="brusnika-1c:notEmptyToken">
+              <xs:annotation>
+                <xs:documentation>идентификатор сообщения</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorksTenderProtocolResponse">
+    <xs:annotation>
+      <xs:documentation>Результаты проведения тендера на работы, услуги</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" name="success" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Признак успешной загрузки</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="criticalErrors" type="brusnika-1c:notEmptyString">
+          <xs:annotation>
+            <xs:documentation>информация о критических ошибках</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="errors">
+          <xs:annotation>
+            <xs:documentation>информация об ошибках</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="error" type="brusnika-1c:notEmptyString"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="warnings">
+          <xs:annotation>
+            <xs:documentation>информация о предупреждениях</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="warning" type="brusnika-1c:notEmptyString"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" name="tenderId" type="brusnika-1c:notEmptyToken">
+          <xs:annotation>
+            <xs:documentation>Идентификатор тендера в 1С</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="attachmentIds">
+          <xs:annotation>
+            <xs:documentation>Идентификаторы файлов к протоколу на ЭТП</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="attachmentId" type="brusnika-1c:EtpId"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="decisions">
+          <xs:annotation>
+            <xs:documentation>информация по решениям, принятым на ТК по лотам тендера</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="decision" type="brusnika-1c:WorksDecision"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="WorksDecision">
+    <xs:annotation>
+      <xs:documentation>Решения по лотам тендера на работы, услуги</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="1" name="lotId" type="brusnika-1c:ExternalId">
+        <xs:annotation>
+          <xs:documentation>идентификатор заявки (лота) в 1С</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="projectClassifierCode" type="xs:token">
+        <xs:annotation>
+          <xs:documentation>Код в классификаторе объектов строительства</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="procurementClassifierCode" type="xs:token">
+        <xs:annotation>
+          <xs:documentation>Код категорий закупки</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="bids">
+        <xs:annotation>
+          <xs:documentation>заявки (предложения) участников</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="bid" type="brusnika-1c:WorksBid"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="comment" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>комментарий</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WorksBid">
+    <xs:annotation>
+      <xs:documentation>Заявка участника тендера на работы, услуги</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="brusnika-1c:Bid">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="bidderType" type="brusnika-1c:BidderType">
+            <xs:annotation>
+              <xs:documentation>тип участника (победитель / резервист / прочее)</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="1" name="executionPeriod" type="brusnika-1c:notEmptyString">
+            <xs:annotation>
+              <xs:documentation>Срок выполнения работ в календарных днях</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="guaranteePeriodReserveAssurance" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Гарантийное удержание</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="generalContractingPercentage" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Генподрядный процент</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="guaranteePeriod" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Сведения по гарантийному периоду</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="paymentStages">
+            <xs:annotation>
+              <xs:documentation>Условия оплаты</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="paymentStage" type="brusnika-1c:WorksPaymentStage"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="1" name="contractConditionsAccept" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>Согласие с договором</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="1" name="hasExtraWorks" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>Необходимы доп. работы сверх сметы</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="extraWorksDescription" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Описание доп. работ</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="extraWorksPrice" type="brusnika-1c:PositiveMoney">
+            <xs:annotation>
+              <xs:documentation>Стоимость доп. работ</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="extraWorksAttachmentIds">
+            <xs:annotation>
+              <xs:documentation>Файлы доп. работ</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="extraWorksAttachmentId" type="brusnika-1c:EtpId"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="bidItems">
+            <xs:annotation>
+              <xs:documentation>Смета участника</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="bidItem" type="brusnika-1c:WorksBidItem"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WorksPaymentStage">
+    <xs:complexContent>
+      <xs:extension base="brusnika-1c:PaymentStage">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="paymentForm" type="brusnika-1c:PaymentForm">
+            <xs:annotation>
+              <xs:documentation>Форма оплаты</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PaymentStage">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="paymentType" type="brusnika-1c:notEmptyString">
+        <xs:annotation>
+          <xs:documentation>Наименование из справочника типов условий выплат</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="percents" type="brusnika-1c:Percent">
+        <xs:annotation>
+          <xs:documentation>Процент выплаты</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="comment" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Комментарий</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PaymentForm">
+    <xs:restriction base="brusnika-1c:notEmptyToken">
+      <xs:enumeration value="MONEY">
+        <xs:annotation>
+          <xs:documentation>Деньги</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BILL_OF_EXCHANGE">
+        <xs:annotation>
+          <xs:documentation>Вексель</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BidderType">
+    <xs:restriction base="brusnika-1c:notEmptyToken">
+      <xs:enumeration value="WINNER">
+        <xs:annotation>
+          <xs:documentation>1 место</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RESERVE">
+        <xs:annotation>
+          <xs:documentation>2 место</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="OTHER">
+        <xs:annotation>
+          <xs:documentation>другие места</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Bidder">
+    <xs:complexContent>
+      <xs:extension base="brusnika-1c:Organization">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="title" type="brusnika-1c:notEmptyToken">
+            <xs:annotation>
+              <xs:documentation>наименование организации</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="1" name="legalAddress" type="brusnika-1c:notEmptyString">
+            <xs:annotation>
+              <xs:documentation>Юридический адрес контрагента</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="ogrn" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>ОГРН</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="okpo" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>ОКПО</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="bankTitle" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Наименование банка контрагента</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="swift" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>БИК банка</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="correspondentAccount" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>к/с банка</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="currentAccount" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>р/с контрагента</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WorksBidItem">
+    <xs:annotation>
+      <xs:documentation>Предложение участника по позиции сметы СМР</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="1" name="purchaseItemId" type="brusnika-1c:ExternalId">
+        <xs:annotation>
+          <xs:documentation>идентификатор позиции в 1С</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:choice>
+        <xs:element minOccurs="1" name="workTypeCode" type="brusnika-1c:notEmptyToken">
+          <xs:annotation>
+            <xs:documentation>код из справочника видов работ</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="1" name="productClassifierCode" type="brusnika-1c:notEmptyToken">
+          <xs:annotation>
+            <xs:documentation>код из справочника материалов</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+      <xs:element minOccurs="0" name="quantity" type="brusnika-1c:NonNegativeDecimal">
+        <xs:annotation>
+          <xs:documentation>количество</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="worksPrice" type="brusnika-1c:Money">
+        <xs:annotation>
+          <xs:documentation>цена за единицу работ (тендеры СМР)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="fixWorksPrice" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Признак фиксации стоимости работ</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="goodsPrice" type="brusnika-1c:Money">
+        <xs:annotation>
+          <xs:documentation>цена за единицу материалов (тендеры СМР)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="fixGoodsPrice" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Признак фиксации стоимости материалов</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="comment" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>комментарий</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetGoodsTenderProtocolRequest">
+    <xs:annotation>
+      <xs:documentation>Получение результатов проведения тендера ТМЦ</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="brusnika-1c:Request">
+          <xs:sequence>
+            <xs:element minOccurs="1" name="messageId" type="brusnika-1c:notEmptyToken">
+              <xs:annotation>
+                <xs:documentation>Идентификатор сообщения</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGoodsTenderProtocolResponse">
+    <xs:annotation>
+      <xs:documentation>Результаты проведения тендера ТМЦ</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" name="success" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Признак успешной загрузки</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="criticalErrors" type="brusnika-1c:notEmptyString">
+          <xs:annotation>
+            <xs:documentation>информация о критических ошибках</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="errors">
+          <xs:annotation>
+            <xs:documentation>информация об ошибках</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="error" type="brusnika-1c:notEmptyString"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="warnings">
+          <xs:annotation>
+            <xs:documentation>информация о предупреждениях</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="warning" type="brusnika-1c:notEmptyString"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" name="tenderId" type="brusnika-1c:notEmptyToken">
+          <xs:annotation>
+            <xs:documentation>Идентификатор тендера в 1С</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="attachmentIds">
+          <xs:annotation>
+            <xs:documentation>Идентификаторы файлов к протоколу на ЭТП</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="attachmentId" type="brusnika-1c:EtpId"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="decisions">
+          <xs:annotation>
+            <xs:documentation>информация по решениям, принятым на ТК по лотам тендера</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="decision" type="brusnika-1c:GoodsDecision"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GoodsDecision">
+    <xs:annotation>
+      <xs:documentation>Решения по лотам тендера ТМЦ</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="1" name="lotId" type="brusnika-1c:ExternalId">
+        <xs:annotation>
+          <xs:documentation>идентификатор заявки (лота) в 1С</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="projectClassifierCode" type="xs:token">
+        <xs:annotation>
+          <xs:documentation>Код в классификаторе объектов строительства</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="procurementClassifierCode" type="xs:token">
+        <xs:annotation>
+          <xs:documentation>Код категорий закупки</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="bids">
+        <xs:annotation>
+          <xs:documentation>заявки (предложения) участников</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="bid" type="brusnika-1c:GoodsBid"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="comment" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>комментарий</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GoodsBid">
+    <xs:annotation>
+      <xs:documentation>Заявка участника на тендер ТМЦ</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="brusnika-1c:Bid">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="transportChargesIncluded" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>Признак включения транспортных расходов в стоимость КП</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="transportCharges" type="brusnika-1c:NonNegativeMoney">
+            <xs:annotation>
+              <xs:documentation>Сумма транспортных расходов</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="deliveryOrder" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Порядок доставки</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="supplierState" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Наименование из справочника статусов поставщика</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="guaranteeTerms" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Предлагаемые условия гарантий</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="paymentStages">
+            <xs:annotation>
+              <xs:documentation>Условия оплаты</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="paymentStage" type="brusnika-1c:PaymentStage"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="bidItems">
+            <xs:annotation>
+              <xs:documentation>Спецификация поставки</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="bidItem" type="brusnika-1c:GoodsBidItem"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Bid">
+    <xs:annotation>
+      <xs:documentation>Общие сведения по заявке участника</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="1" name="bidder" type="brusnika-1c:Bidder">
+        <xs:annotation>
+          <xs:documentation>сведения о контрагенте</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="price" type="brusnika-1c:PositiveMoney">
+        <xs:annotation>
+          <xs:documentation>полная стоимость предложения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="commercialOfferAttachmentIds">
+        <xs:annotation>
+          <xs:documentation>Коммерческое предложение</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="commercialOfferAttachmentId" type="brusnika-1c:EtpId"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="otherAttachmentIds">
+        <xs:annotation>
+          <xs:documentation>Другие документы</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="otherAttachmentId" type="brusnika-1c:EtpId"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="1" name="vatType" type="brusnika-1c:BidVatType">
+        <xs:annotation>
+          <xs:documentation>Базис НДС подачи предложения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="currencyCode" type="brusnika-1c:notEmptyToken">
+        <xs:annotation>
+          <xs:documentation>Валюта предложения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GoodsBidItem">
+    <xs:annotation>
+      <xs:documentation>Предложение участника по позиции спецификации поставки</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="brusnika-1c:ExternalId">
+        <xs:annotation>
+          <xs:documentation>Идентификатор позиции в 1С</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="productClassifierCode" type="brusnika-1c:notEmptyToken">
+        <xs:annotation>
+          <xs:documentation>код из справочника материалов</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="bidderType" type="brusnika-1c:BidderType">
+        <xs:annotation>
+          <xs:documentation>тип участника</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="price" type="brusnika-1c:NonNegativeMoney">
+        <xs:annotation>
+          <xs:documentation>Цена за единицу по позиции в валюте предложения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="priceTenderCurrency" type="brusnika-1c:NonNegativeMoney">
+        <xs:annotation>
+          <xs:documentation>Цена за единицу по позиции в валюте тендера</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="quantity" type="brusnika-1c:NonNegativeDecimal">
+        <xs:annotation>
+          <xs:documentation>Предлагаемое количество</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="confirmedQuantity" type="brusnika-1c:NonNegativeDecimal">
+        <xs:annotation>
+          <xs:documentation>Согласованное количество</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="deliveryPeriod" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Срок поставки</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="productClassifierAnalogueCode" type="xs:token">
+        <xs:annotation>
+          <xs:documentation>Код элемента ProductClassifier (аналог)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="comment" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Комментарий к позиции</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UploadNominatedMaterialsPricesRequest">
+    <xs:annotation>
+      <xs:documentation>Загрузка расчетных цен по материалам</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="brusnika-1c:Request">
+          <xs:sequence>
+            <xs:element minOccurs="0" name="nominatedPricesByLots">
+              <xs:annotation>
+                <xs:documentation>Цены номинированных материалов по лотам</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="nominatedPricesByLot" type="brusnika-1c:NominatedPricesByLot"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="NominatedPricesByLot">
+    <xs:annotation>
+      <xs:documentation>Цены номинированных материалов по лотам</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="1" name="lotId" type="brusnika-1c:ExternalId">
+        <xs:annotation>
+          <xs:documentation>Идентификатор лота в 1С</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="purchaseItemPrices">
+        <xs:annotation>
+          <xs:documentation>Расчетные цены по позициям</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="purchaseItemPrice" type="brusnika-1c:PurchaseItemPrice"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="1" name="requestBidImprovements" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Определяет необходимость направить всем участникам запросы на уточнение КП</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PurchaseItemPrice">
+    <xs:annotation>
+      <xs:documentation>Расчетные цены по номинированным материалам</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="1" name="id" type="brusnika-1c:ExternalId">
+        <xs:annotation>
+          <xs:documentation>Идентификатор позиции в 1С</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="initialGoodsPrice" type="brusnika-1c:Money">
+        <xs:annotation>
+          <xs:documentation>Расчетная стоимость материалов</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UploadLotCancelDecisionRequest">
+    <xs:annotation>
+      <xs:documentation>Передача на ЭТП сведений об отмене лота(-ов)</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="brusnika-1c:Request">
+          <xs:sequence>
+            <xs:element minOccurs="1" name="lotIds">
+              <xs:annotation>
+                <xs:documentation>Идентификаторы лотов к отмене</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="lotId" type="brusnika-1c:ExternalId"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="1" name="comment" type="brusnika-1c:notEmptyString">
+              <xs:annotation>
+                <xs:documentation>Комментарий к решению</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="cancelDecisionAttachments">
+              <xs:annotation>
+                <xs:documentation>Идентификаторы файлов с решением об отмене</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="cancelDecisionAttachment" type="brusnika-1c:EtpId"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLotCancelDecisionRequest">
+    <xs:annotation>
+      <xs:documentation>Запрос сведений об отмене лота</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="brusnika-1c:Request">
+          <xs:sequence>
+            <xs:element minOccurs="1" name="messageId" type="brusnika-1c:notEmptyToken">
+              <xs:annotation>
+                <xs:documentation>Идентификатор сообщения</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLotCancelDecisionResponse">
+    <xs:annotation>
+      <xs:documentation>Получение сведений об отмене лота</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" name="success" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Признак успешной загрузки</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="criticalErrors" type="brusnika-1c:notEmptyString">
+          <xs:annotation>
+            <xs:documentation>информация о критических ошибках</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="errors">
+          <xs:annotation>
+            <xs:documentation>информация об ошибках</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="error" type="brusnika-1c:notEmptyString"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="warnings">
+          <xs:annotation>
+            <xs:documentation>информация о предупреждениях</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="warning" type="brusnika-1c:notEmptyString"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" name="tenderId" type="brusnika-1c:notEmptyToken">
+          <xs:annotation>
+            <xs:documentation>Идентификатор тендера в 1С, по которому отменен лот</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="1" name="lotIds">
+          <xs:annotation>
+            <xs:documentation>Идентификаторы лотов к отмене</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="lotId" type="brusnika-1c:ExternalId"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" name="comment" type="brusnika-1c:notEmptyString">
+          <xs:annotation>
+            <xs:documentation>Комментарий к решению</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="cancelDecisionAttachments">
+          <xs:annotation>
+            <xs:documentation>Идентификаторы файлов с решением об отмене</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="cancelDecisionAttachment" type="brusnika-1c:EtpId"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://brusnika.demo.ultimeta.ru/ws/brusnika-1c/common-types.xsd</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://ultimeta.ru/schemas/brusnika-1c" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:brusnika-1c="http://ultimeta.ru/schemas/brusnika-1c">
+  <xs:simpleType name="notEmptyString">
+    <xs:annotation>
+      <xs:documentation>Непустая строка</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:whiteSpace value="collapse"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="notEmptyToken">
+    <xs:annotation>
+      <xs:documentation>Непустой token</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:minLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Email">
+    <xs:annotation>
+      <xs:documentation>e-mail</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="brusnika-1c:notEmptyToken">
+      <xs:maxLength value="254"/>
+      <xs:pattern value="[^@]+@[^\.]+\..+"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Inn">
+    <xs:annotation>
+      <xs:documentation>Инн</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="brusnika-1c:notEmptyToken">
+      <xs:pattern value="\d{10}(\d\d)?"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Kpp">
+    <xs:annotation>
+      <xs:documentation>Кпп</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="brusnika-1c:notEmptyToken">
+      <xs:pattern value="\d{9}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Money">
+    <xs:restriction base="xs:decimal">
+      <xs:fractionDigits value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PositiveMoney">
+    <xs:restriction base="brusnika-1c:Money">
+      <xs:minExclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NonNegativeMoney">
+    <xs:restriction base="brusnika-1c:Money">
+      <xs:minInclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NonNegativeDecimal">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Percent">
+    <xs:restriction base="xs:decimal">
+      <xs:fractionDigits value="2"/>
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EtpId">
+    <xs:restriction base="xs:long"/>
+  </xs:simpleType>
+  <xs:simpleType name="ExternalId">
+    <xs:restriction base="brusnika-1c:notEmptyToken"/>
+  </xs:simpleType>
+  <xs:complexType name="Request">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="packageId" type="brusnika-1c:notEmptyToken">
+        <xs:annotation>
+          <xs:documentation>Идентификатор интеграционного пакета</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" name="success" type="xs:boolean"/>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="criticalErrors" type="brusnika-1c:notEmptyString">
+          <xs:annotation>
+            <xs:documentation>информация о критических ошибках</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="errors">
+          <xs:annotation>
+            <xs:documentation>информация о предупреждениях</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="error" type="brusnika-1c:notEmptyString"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Organization">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="id" type="brusnika-1c:EtpId">
+        <xs:annotation>
+          <xs:documentation>Внутренний идентификатор контрагента</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:choice>
+        <xs:sequence minOccurs="1">
+          <xs:element minOccurs="1" name="inn" type="brusnika-1c:Inn">
+            <xs:annotation>
+              <xs:documentation>ИНН</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="kpp" type="brusnika-1c:Kpp">
+            <xs:annotation>
+              <xs:documentation>КПП</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+        <xs:element minOccurs="1" name="taxCode" type="brusnika-1c:notEmptyString">
+          <xs:annotation>
+            <xs:documentation>Налоговый код</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="VatType">
+    <xs:restriction base="brusnika-1c:notEmptyToken">
+      <xs:enumeration value="EXCLUDED">
+        <xs:annotation>
+          <xs:documentation>без учёта НДС</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INCLUDED">
+        <xs:annotation>
+          <xs:documentation>с учётом НДС</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NA">
+        <xs:annotation>
+          <xs:documentation>НДС не облагается</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BidVatType">
+    <xs:restriction base="brusnika-1c:notEmptyToken">
+      <xs:enumeration value="INCLUDED_20">
+        <xs:annotation>
+          <xs:documentation>с учётом НДС 20%</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INCLUDED_10">
+        <xs:annotation>
+          <xs:documentation>с учётом НДС 10%</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INCLUDED_0">
+        <xs:annotation>
+          <xs:documentation>с учётом НДС 0%</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NA">
+        <xs:annotation>
+          <xs:documentation>НДС не облагается</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://brusnika.demo.ultimeta.ru/ws/brusnika-1c/messages.xsd</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://ultimeta.ru/schemas/brusnika-1c" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:brusnika-1c="http://ultimeta.ru/schemas/brusnika-1c">
+  <xs:include schemaLocation="common-types.xsd"/>
+  <xs:element name="GetMessagesRequest">
+    <xs:annotation>
+      <xs:documentation>Запрос очереди сообщений</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="brusnika-1c:Request">
+          <xs:sequence/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMessagesResponse">
+    <xs:annotation>
+      <xs:documentation>Получение очереди сообщений</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" name="success" type="xs:boolean"/>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="criticalErrors" type="brusnika-1c:notEmptyString">
+          <xs:annotation>
+            <xs:documentation>информация о критических ошибках</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="errors">
+          <xs:annotation>
+            <xs:documentation>информация о предупреждениях</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="error" type="brusnika-1c:notEmptyString"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="messages">
+          <xs:annotation>
+            <xs:documentation>Очередь сообщений</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="message" type="brusnika-1c:Message"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Message">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="id" type="brusnika-1c:notEmptyToken">
+        <xs:annotation>
+          <xs:documentation>Идентификатор сообщения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="type" type="brusnika-1c:MessageType">
+        <xs:annotation>
+          <xs:documentation>Тип передаваемых сообщений</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="MessageType">
+    <xs:restriction base="brusnika-1c:notEmptyToken">
+      <xs:enumeration value="GET_WORKS_TENDER_PROTOCOL">
+        <xs:annotation>
+          <xs:documentation>Получение результатов тендера СМР</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GET_GOODS_TENDER_PROTOCOL">
+        <xs:annotation>
+          <xs:documentation>Получение результатов тендера ТМЦ</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GET_LOT_CANCEL_DECISION">
+        <xs:annotation>
+          <xs:documentation>Сообщение об отмене тендера</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UploadMessageProcessingStatusRequest">
+    <xs:annotation>
+      <xs:documentation>Передача сведений об обработке сообщения</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="brusnika-1c:Request">
+          <xs:sequence>
+            <xs:element minOccurs="1" name="messageId" type="brusnika-1c:notEmptyToken">
+              <xs:annotation>
+                <xs:documentation>Идентификатор сообщения</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="1" name="success" type="xs:boolean">
+              <xs:annotation>
+                <xs:documentation>Статус обработки сообщения</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="errors">
+              <xs:annotation>
+                <xs:documentation>Ошибки, возникшие при обработке</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="error" type="brusnika-1c:notEmptyString"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://brusnika.demo.ultimeta.ru/ws/brusnika-1c/classifiers.xsd</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://ultimeta.ru/schemas/brusnika-1c" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:brusnika-1c="http://ultimeta.ru/schemas/brusnika-1c">
+  <xs:include schemaLocation="common-types.xsd"/>
+  <xs:element name="UploadProcurementClassifierRequest">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="brusnika-1c:Request">
+          <xs:sequence>
+            <xs:element minOccurs="1" name="procurementClassifiers">
+              <xs:annotation>
+                <xs:documentation>элементы классификатора</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="procurementClassifier" type="brusnika-1c:ClassifierWithId"/>
+                </xs:sequence>
+              </xs:complexType>
+              <xs:unique name="uniqueProcurementClassifierId">
+                <xs:selector xpath="brusnika-1c:procurementClassifier"/>
+                <xs:field xpath="brusnika-1c:id"/>
+              </xs:unique>
+              <xs:unique name="uniqueProcurementClassifierCode">
+                <xs:selector xpath="brusnika-1c:procurementClassifier"/>
+                <xs:field xpath="brusnika-1c:code"/>
+              </xs:unique>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadProductClassifierRequest">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="brusnika-1c:Request">
+          <xs:sequence>
+            <xs:element minOccurs="1" name="productClassifiers">
+              <xs:annotation>
+                <xs:documentation>элементы классификатора</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="productClassifier" type="brusnika-1c:ProductClassifier"/>
+                </xs:sequence>
+              </xs:complexType>
+              <xs:unique name="uniqueProductClassifierId">
+                <xs:selector xpath="brusnika-1c:productClassifier"/>
+                <xs:field xpath="brusnika-1c:id"/>
+              </xs:unique>
+              <xs:unique name="uniqueProductClassifierCode">
+                <xs:selector xpath="brusnika-1c:productClassifier"/>
+                <xs:field xpath="brusnika-1c:code"/>
+              </xs:unique>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadWorkTypesRequest">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="brusnika-1c:Request">
+          <xs:sequence>
+            <xs:element minOccurs="1" name="workTypes">
+              <xs:annotation>
+                <xs:documentation>элементы классификатора</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="workType" type="brusnika-1c:WorkType"/>
+                </xs:sequence>
+              </xs:complexType>
+              <xs:unique name="uniqueWorkTypeId">
+                <xs:selector xpath="brusnika-1c:workType"/>
+                <xs:field xpath="brusnika-1c:id"/>
+              </xs:unique>
+              <xs:unique name="uniqueWorkTypeCode">
+                <xs:selector xpath="brusnika-1c:workType"/>
+                <xs:field xpath="brusnika-1c:code"/>
+              </xs:unique>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadProjectClassifierRequest">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="brusnika-1c:Request">
+          <xs:sequence>
+            <xs:element minOccurs="1" name="projectClassifiers">
+              <xs:annotation>
+                <xs:documentation>элементы классификатора</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="projectClassifier" type="brusnika-1c:ProjectClassifier"/>
+                </xs:sequence>
+              </xs:complexType>
+              <xs:unique name="uniqueProjectClassifierId">
+                <xs:selector xpath="brusnika-1c:projectClassifier"/>
+                <xs:field xpath="brusnika-1c:id"/>
+              </xs:unique>
+              <xs:unique name="uniqueProjectClassifierCode">
+                <xs:selector xpath="brusnika-1c:projectClassifier"/>
+                <xs:field xpath="brusnika-1c:code"/>
+              </xs:unique>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadUnitsRequest">
+    <xs:annotation>
+      <xs:documentation>Загрузка справочника единиц измерения</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="brusnika-1c:Request">
+          <xs:sequence>
+            <xs:element minOccurs="1" name="units">
+              <xs:annotation>
+                <xs:documentation>элементы справочника</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="unit" type="brusnika-1c:VocabularyWithId"/>
+                </xs:sequence>
+              </xs:complexType>
+              <xs:unique name="uniqueUnitId">
+                <xs:selector xpath="brusnika-1c:unit"/>
+                <xs:field xpath="brusnika-1c:id"/>
+              </xs:unique>
+              <xs:unique name="uniqueUnitCode">
+                <xs:selector xpath="brusnika-1c:unit"/>
+                <xs:field xpath="brusnika-1c:code"/>
+              </xs:unique>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ProjectClassifier">
+    <xs:complexContent>
+      <xs:extension base="brusnika-1c:ClassifierWithId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="contactsForWinners" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>контакты для победителей на объекте</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="address" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Адрес объекта</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ProductClassifier">
+    <xs:complexContent>
+      <xs:extension base="brusnika-1c:ClassifierWithId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="partNumber" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>партийный номер товара</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="unitCode" type="xs:token">
+            <xs:annotation>
+              <xs:documentation>код единицы измерения</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WorkType">
+    <xs:complexContent>
+      <xs:extension base="brusnika-1c:ClassifierWithId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="unitCode" type="xs:token">
+            <xs:annotation>
+              <xs:documentation>код единицы измерения</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ClassifierWithId">
+    <xs:complexContent>
+      <xs:extension base="brusnika-1c:VocabularyWithId">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="parentId" type="brusnika-1c:ExternalId">
+            <xs:annotation>
+              <xs:documentation>Идентификатор родительского элемента</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="1" name="actual" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>Признак, что элемент актуален. Дефолт - true</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="VocabularyWithId">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="id" type="brusnika-1c:ExternalId">
+        <xs:annotation>
+          <xs:documentation>идентификатор элемента</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="code" type="brusnika-1c:notEmptyToken">
+        <xs:annotation>
+          <xs:documentation>код элемента</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="title" type="brusnika-1c:notEmptyString">
+        <xs:annotation>
+          <xs:documentation>Наименование элемента</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://brusnika.demo.ultimeta.ru/ws/brusnika-1c/documents.xsd</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://ultimeta.ru/schemas/brusnika-1c" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:brusnika-1c="http://ultimeta.ru/schemas/brusnika-1c">
+  <xs:include schemaLocation="common-types.xsd"/>
+  <xs:element name="GetDocumentRequest">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="brusnika-1c:Request">
+          <xs:sequence>
+            <xs:element minOccurs="1" name="fileId" type="brusnika-1c:EtpId">
+              <xs:annotation>
+                <xs:documentation>Идентификатор файла на ЭТП</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" name="success" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Признак успешной обработки</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="criticalErrors" type="brusnika-1c:notEmptyString">
+          <xs:annotation>
+            <xs:documentation>информация о критических ошибках</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="errors">
+          <xs:annotation>
+            <xs:documentation>информация о предупреждениях</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="error" type="brusnika-1c:notEmptyString"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="attachment" type="brusnika-1c:Attachment">
+          <xs:annotation>
+            <xs:documentation>Скачиваемый документ</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Attachment">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="fileName" type="brusnika-1c:notEmptyString">
+        <xs:annotation>
+          <xs:documentation>Наименование файла</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" name="data" type="xs:base64Binary">
+        <xs:annotation>
+          <xs:documentation>Содержимое файла в base64</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UploadDocumentRequest">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="brusnika-1c:Request">
+          <xs:sequence>
+            <xs:element minOccurs="1" name="attachment" type="brusnika-1c:Attachment">
+              <xs:annotation>
+                <xs:documentation>Загружаемый документ</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" name="success" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Признак успешной обработки</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="criticalErrors" type="brusnika-1c:notEmptyString">
+          <xs:annotation>
+            <xs:documentation>информация о критических ошибках</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="errors">
+          <xs:annotation>
+            <xs:documentation>информация о предупреждениях</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="error" type="brusnika-1c:notEmptyString"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="fileId" type="brusnika-1c:EtpId">
+          <xs:annotation>
+            <xs:documentation>Идентификатор документа на ЭТП</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint></con:endpoints><con:operation id="3a2ca3f8-fac2-47ad-8592-520ade319805" isOneWay="false" action="" name="GetDocument" bindingOperationName="GetDocument" type="Request-Response" outputName="GetDocumentResponse" inputName="GetDocumentRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9a5c89f4-52ae-4ff1-99fa-c8de5650e6b8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <brus:GetDocumentRequest>\r
+         <brus:packageId>?</brus:packageId>\r
+         <brus:fileId>?</brus:fileId>\r
+      </brus:GetDocumentRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ultimeta.ru/schemas/brusnika-1c-ws/integrationPort/GetDocumentRequest"/></con:call></con:operation><con:operation id="f7ba9676-5632-465a-997a-af49e074bd05" isOneWay="false" action="" name="GetGoodsTenderProtocol" bindingOperationName="GetGoodsTenderProtocol" type="Request-Response" outputName="GetGoodsTenderProtocolResponse" inputName="GetGoodsTenderProtocolRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c91255a6-2e11-429b-a344-c06e3222536b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <brus:GetGoodsTenderProtocolRequest>\r
+         <brus:packageId>?</brus:packageId>\r
+         <brus:messageId>?</brus:messageId>\r
+      </brus:GetGoodsTenderProtocolRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ultimeta.ru/schemas/brusnika-1c-ws/integrationPort/GetGoodsTenderProtocolRequest"/></con:call></con:operation><con:operation id="ca50dc8e-d3f7-49f8-9f3b-6a841d9a0e4e" isOneWay="false" action="" name="GetLotCancelDecision" bindingOperationName="GetLotCancelDecision" type="Request-Response" outputName="GetLotCancelDecisionResponse" inputName="GetLotCancelDecisionRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a975b3f8-8401-4cd3-af97-4a3cebd562f6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <brus:GetLotCancelDecisionRequest>\r
+         <brus:packageId>?</brus:packageId>\r
+         <brus:messageId>?</brus:messageId>\r
+      </brus:GetLotCancelDecisionRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ultimeta.ru/schemas/brusnika-1c-ws/integrationPort/GetLotCancelDecisionRequest"/></con:call></con:operation><con:operation id="cf8637ca-f0b7-4aed-8786-62d1a1d3bca5" isOneWay="false" action="" name="GetMessages" bindingOperationName="GetMessages" type="Request-Response" outputName="GetMessagesResponse" inputName="GetMessagesRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7894f66b-4da9-4571-aa87-971d22d4cd85" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <brus:GetMessagesRequest>\r
+         <brus:packageId>?</brus:packageId>\r
+      </brus:GetMessagesRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ultimeta.ru/schemas/brusnika-1c-ws/integrationPort/GetMessagesRequest"/></con:call></con:operation><con:operation id="e2031ecb-8dae-4ef9-bbdb-9cd324ca0a3c" isOneWay="false" action="" name="GetWorksTenderProtocol" bindingOperationName="GetWorksTenderProtocol" type="Request-Response" outputName="GetWorksTenderProtocolResponse" inputName="GetWorksTenderProtocolRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b2d2d0df-83ae-4785-aefc-2b19e4ad10e4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <brus:GetWorksTenderProtocolRequest>\r
+         <brus:packageId>?</brus:packageId>\r
+         <brus:messageId>?</brus:messageId>\r
+      </brus:GetWorksTenderProtocolRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ultimeta.ru/schemas/brusnika-1c-ws/integrationPort/GetWorksTenderProtocolRequest"/></con:call></con:operation><con:operation id="efbb9843-211f-4b18-b1f6-3b72901bc5e8" isOneWay="false" action="" name="UploadDocument" bindingOperationName="UploadDocument" type="Request-Response" outputName="UploadDocumentResponse" inputName="UploadDocumentRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d524431a-2207-478c-b742-9fb83e0185f8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <brus:UploadDocumentRequest>\r
+         <brus:packageId>?</brus:packageId>\r
+         <brus:attachment>\r
+            <brus:fileName>?</brus:fileName>\r
+            <brus:data>cid:211045715003</brus:data>\r
+         </brus:attachment>\r
+      </brus:UploadDocumentRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ultimeta.ru/schemas/brusnika-1c-ws/integrationPort/UploadDocumentRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="34fbae54-c30c-4a74-9f4d-eb3aa4658ef8" isOneWay="false" action="" name="UploadGoodsTender" bindingOperationName="UploadGoodsTender" type="Request-Response" outputName="UploadGoodsTenderResponse" inputName="UploadGoodsTenderRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="424404a6-d2d8-42a2-bea5-a2786583d430" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <brus:UploadGoodsTenderRequest>\r
+         <brus:packageId>?</brus:packageId>\r
+         <brus:tenderId>?</brus:tenderId>\r
+         <brus:registeredNumber>?</brus:registeredNumber>\r
+         <brus:title>?</brus:title>\r
+         <brus:emailOrganizer>?</brus:emailOrganizer>\r
+         <brus:vatType>?</brus:vatType>\r
+         <brus:currencyCode>?</brus:currencyCode>\r
+         <brus:lots>\r
+            <!--1 or more repetitions:-->\r
+            <brus:lot>\r
+               <brus:id>?</brus:id>\r
+               <brus:registeredNumber>?</brus:registeredNumber>\r
+               <brus:title>?</brus:title>\r
+               <!--Optional:-->\r
+               <brus:projectClassifierCode>?</brus:projectClassifierCode>\r
+               <!--Optional:-->\r
+               <brus:procurementClassifierCode>?</brus:procurementClassifierCode>\r
+               <brus:enablePricePerPurchaseItem>?</brus:enablePricePerPurchaseItem>\r
+               <brus:paymentTermsType>?</brus:paymentTermsType>\r
+               <brus:paymentDelayTerms>?</brus:paymentDelayTerms>\r
+               <brus:allowPaymentDelayTermsInBid>?</brus:allowPaymentDelayTermsInBid>\r
+               <brus:allowPaymentStagesInBid>?</brus:allowPaymentStagesInBid>\r
+               <brus:paymentStagesPercentsInTrade>?</brus:paymentStagesPercentsInTrade>\r
+               <brus:paymentStagesPeriodInTrade>?</brus:paymentStagesPeriodInTrade>\r
+               <brus:paymentStages>\r
+                  <!--1 or more repetitions:-->\r
+                  <brus:paymentStage>\r
+                     <brus:paymentType>?</brus:paymentType>\r
+                     <brus:percents>?</brus:percents>\r
+                     <!--Optional:-->\r
+                     <brus:comment>?</brus:comment>\r
+                  </brus:paymentStage>\r
+               </brus:paymentStages>\r
+               <brus:goodsPurchaseItems>\r
+                  <!--1 or more repetitions:-->\r
+                  <brus:goodsPurchaseItem>\r
+                     <brus:id>?</brus:id>\r
+                     <!--Optional:-->\r
+                     <brus:productClassifierCode>?</brus:productClassifierCode>\r
+                     <!--Optional:-->\r
+                     <brus:characteristics>?</brus:characteristics>\r
+                     <brus:quantity>?</brus:quantity>\r
+                     <brus:unitCode>?</brus:unitCode>\r
+                     <!--Optional:-->\r
+                     <brus:price>?</brus:price>\r
+                     <!--Optional:-->\r
+                     <brus:deliveryPeriod>?</brus:deliveryPeriod>\r
+                     <!--Optional:-->\r
+                     <brus:comment>?</brus:comment>\r
+                  </brus:goodsPurchaseItem>\r
+               </brus:goodsPurchaseItems>\r
+               <!--Optional:-->\r
+               <brus:otherAttachmentIds>\r
+                  <!--1 or more repetitions:-->\r
+                  <brus:otherAttachmentId>?</brus:otherAttachmentId>\r
+               </brus:otherAttachmentIds>\r
+            </brus:lot>\r
+         </brus:lots>\r
+         <!--Optional:-->\r
+         <brus:notes>?</brus:notes>\r
+         <!--Optional:-->\r
+         <brus:otherAttachmentIds>\r
+            <!--1 or more repetitions:-->\r
+            <brus:otherAttachmentId>?</brus:otherAttachmentId>\r
+         </brus:otherAttachmentIds>\r
+         <!--Optional:-->\r
+         <brus:modificationReason>?</brus:modificationReason>\r
+      </brus:UploadGoodsTenderRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ultimeta.ru/schemas/brusnika-1c-ws/integrationPort/UploadGoodsTenderRequest"/></con:call></con:operation><con:operation id="79141fb4-70d8-4b4a-84ca-14e3c7270f9b" isOneWay="false" action="" name="UploadLotCancelDecision" bindingOperationName="UploadLotCancelDecision" type="Request-Response" outputName="UploadLotCancelDecisionResponse" inputName="UploadLotCancelDecisionRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="70933125-3af0-4c91-bda4-8510913ee4cf" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <brus:UploadLotCancelDecisionRequest>\r
+         <brus:packageId>?</brus:packageId>\r
+         <brus:lotIds>\r
+            <!--1 or more repetitions:-->\r
+            <brus:lotId>?</brus:lotId>\r
+         </brus:lotIds>\r
+         <brus:comment>?</brus:comment>\r
+         <!--Optional:-->\r
+         <brus:cancelDecisionAttachments>\r
+            <!--1 or more repetitions:-->\r
+            <brus:cancelDecisionAttachment>?</brus:cancelDecisionAttachment>\r
+         </brus:cancelDecisionAttachments>\r
+      </brus:UploadLotCancelDecisionRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ultimeta.ru/schemas/brusnika-1c-ws/integrationPort/UploadLotCancelDecisionRequest"/></con:call></con:operation><con:operation id="5c823a7e-781c-48dc-955f-9865573bbf45" isOneWay="false" action="" name="UploadMessageProcessingStatus" bindingOperationName="UploadMessageProcessingStatus" type="Request-Response" outputName="UploadMessageProcessingStatusResponse" inputName="UploadMessageProcessingStatusRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1a2ecab9-4045-4cec-bd4d-daf093710c5c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <brus:UploadMessageProcessingStatusRequest>\r
+         <brus:packageId>?</brus:packageId>\r
+         <brus:messageId>?</brus:messageId>\r
+         <brus:success>?</brus:success>\r
+         <!--Optional:-->\r
+         <brus:errors>\r
+            <!--1 or more repetitions:-->\r
+            <brus:error>?</brus:error>\r
+         </brus:errors>\r
+      </brus:UploadMessageProcessingStatusRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ultimeta.ru/schemas/brusnika-1c-ws/integrationPort/UploadMessageProcessingStatusRequest"/></con:call></con:operation><con:operation id="2c96aacc-49d9-440a-9246-0a2b46841a2a" isOneWay="false" action="" name="UploadNominatedMaterialsPrices" bindingOperationName="UploadNominatedMaterialsPrices" type="Request-Response" outputName="UploadNominatedMaterialsPricesResponse" inputName="UploadNominatedMaterialsPricesRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b24f8624-e0b5-4193-8d56-c83ab9d35c87" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <brus:UploadNominatedMaterialsPricesRequest>\r
+         <brus:packageId>?</brus:packageId>\r
+         <!--Optional:-->\r
+         <brus:nominatedPricesByLots>\r
+            <!--1 or more repetitions:-->\r
+            <brus:nominatedPricesByLot>\r
+               <brus:lotId>?</brus:lotId>\r
+               <!--Optional:-->\r
+               <brus:purchaseItemPrices>\r
+                  <!--1 or more repetitions:-->\r
+                  <brus:purchaseItemPrice>\r
+                     <brus:id>?</brus:id>\r
+                     <brus:initialGoodsPrice>?</brus:initialGoodsPrice>\r
+                  </brus:purchaseItemPrice>\r
+               </brus:purchaseItemPrices>\r
+               <brus:requestBidImprovements>?</brus:requestBidImprovements>\r
+            </brus:nominatedPricesByLot>\r
+         </brus:nominatedPricesByLots>\r
+      </brus:UploadNominatedMaterialsPricesRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ultimeta.ru/schemas/brusnika-1c-ws/integrationPort/UploadNominatedMaterialsPricesRequest"/></con:call></con:operation><con:operation id="d340c317-ac3a-4075-8a24-045ef004c86c" isOneWay="false" action="" name="UploadProcurementClassifier" bindingOperationName="UploadProcurementClassifier" type="Request-Response" outputName="UploadProcurementClassifierResponse" inputName="UploadProcurementClassifierRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4a372f6e-ba87-44e7-8e90-6156c4cf253b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <brus:UploadProcurementClassifierRequest>\r
+         <brus:packageId>?</brus:packageId>\r
+         <brus:procurementClassifiers>\r
+            <!--1 or more repetitions:-->\r
+            <brus:procurementClassifier>\r
+               <brus:id>?</brus:id>\r
+               <brus:code>?</brus:code>\r
+               <brus:title>?</brus:title>\r
+               <!--Optional:-->\r
+               <brus:parentId>?</brus:parentId>\r
+               <brus:actual>?</brus:actual>\r
+            </brus:procurementClassifier>\r
+         </brus:procurementClassifiers>\r
+      </brus:UploadProcurementClassifierRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ultimeta.ru/schemas/brusnika-1c-ws/integrationPort/UploadProcurementClassifierRequest"/></con:call></con:operation><con:operation id="02f57aef-7720-4be2-a308-1679d5d775c2" isOneWay="false" action="" name="UploadProductClassifier" bindingOperationName="UploadProductClassifier" type="Request-Response" outputName="UploadProductClassifierResponse" inputName="UploadProductClassifierRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="20d7e7a0-f780-459c-bcd1-b425bec6f6ed" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <brus:UploadProductClassifierRequest>\r
+         <brus:packageId>?</brus:packageId>\r
+         <brus:productClassifiers>\r
+            <!--1 or more repetitions:-->\r
+            <brus:productClassifier>\r
+               <brus:id>?</brus:id>\r
+               <brus:code>?</brus:code>\r
+               <brus:title>?</brus:title>\r
+               <!--Optional:-->\r
+               <brus:parentId>?</brus:parentId>\r
+               <brus:actual>?</brus:actual>\r
+               <!--Optional:-->\r
+               <brus:partNumber>?</brus:partNumber>\r
+               <!--Optional:-->\r
+               <brus:unitCode>?</brus:unitCode>\r
+            </brus:productClassifier>\r
+         </brus:productClassifiers>\r
+      </brus:UploadProductClassifierRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ultimeta.ru/schemas/brusnika-1c-ws/integrationPort/UploadProductClassifierRequest"/></con:call></con:operation><con:operation id="ef3f8f0b-44b0-436f-ba7f-e4e02d5777a0" isOneWay="false" action="" name="UploadProjectClassifier" bindingOperationName="UploadProjectClassifier" type="Request-Response" outputName="UploadProjectClassifierResponse" inputName="UploadProjectClassifierRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d97d144f-855c-4100-b167-a7ac8899af37" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <brus:UploadProjectClassifierRequest>\r
+         <brus:packageId>?</brus:packageId>\r
+         <brus:projectClassifiers>\r
+            <!--1 or more repetitions:-->\r
+            <brus:projectClassifier>\r
+               <brus:id>?</brus:id>\r
+               <brus:code>?</brus:code>\r
+               <brus:title>?</brus:title>\r
+               <!--Optional:-->\r
+               <brus:parentId>?</brus:parentId>\r
+               <brus:actual>?</brus:actual>\r
+               <!--Optional:-->\r
+               <brus:contactsForWinners>?</brus:contactsForWinners>\r
+               <!--Optional:-->\r
+               <brus:address>?</brus:address>\r
+            </brus:projectClassifier>\r
+         </brus:projectClassifiers>\r
+      </brus:UploadProjectClassifierRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ultimeta.ru/schemas/brusnika-1c-ws/integrationPort/UploadProjectClassifierRequest"/></con:call></con:operation><con:operation id="bba31869-fe8f-4330-9be7-eea9f8b084a9" isOneWay="false" action="" name="UploadUnits" bindingOperationName="UploadUnits" type="Request-Response" outputName="UploadUnitsResponse" inputName="UploadUnitsRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7bf72308-2cfa-4f38-a4ee-d564165983ce" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <brus:UploadUnitsRequest>\r
+         <brus:packageId>?</brus:packageId>\r
+         <brus:units>\r
+            <!--1 or more repetitions:-->\r
+            <brus:unit>\r
+               <brus:id>?</brus:id>\r
+               <brus:code>?</brus:code>\r
+               <brus:title>?</brus:title>\r
+            </brus:unit>\r
+         </brus:units>\r
+      </brus:UploadUnitsRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ultimeta.ru/schemas/brusnika-1c-ws/integrationPort/UploadUnitsRequest"/></con:call></con:operation><con:operation id="191c6040-3542-412a-8cf1-afa2d4f39a0f" isOneWay="false" action="" name="UploadWorksTender" bindingOperationName="UploadWorksTender" type="Request-Response" outputName="UploadWorksTenderResponse" inputName="UploadWorksTenderRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c64332d7-d4a4-4121-8f68-275615602c0b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <brus:UploadWorksTenderRequest>\r
+         <brus:packageId>?</brus:packageId>\r
+         <brus:tenderId>?</brus:tenderId>\r
+         <brus:registeredNumber>?</brus:registeredNumber>\r
+         <brus:emailOrganizer>?</brus:emailOrganizer>\r
+         <brus:title>?</brus:title>\r
+         <brus:currencyCode>?</brus:currencyCode>\r
+         <brus:vatType>?</brus:vatType>\r
+         <!--Optional:-->\r
+         <brus:notes>?</brus:notes>\r
+         <!--Optional:-->\r
+         <brus:lots>\r
+            <!--1 or more repetitions:-->\r
+            <brus:lot>\r
+               <brus:id>?</brus:id>\r
+               <brus:registeredNumber>?</brus:registeredNumber>\r
+               <brus:title>?</brus:title>\r
+               <!--Optional:-->\r
+               <brus:initialContractPrice>?</brus:initialContractPrice>\r
+               <!--Optional:-->\r
+               <brus:description>?</brus:description>\r
+               <!--Optional:-->\r
+               <brus:projectClassifierCode>?</brus:projectClassifierCode>\r
+               <!--Optional:-->\r
+               <brus:procurementClassifierCode>?</brus:procurementClassifierCode>\r
+               <!--Optional:-->\r
+               <brus:executionPeriod>?</brus:executionPeriod>\r
+               <!--Optional:-->\r
+               <brus:guaranteePeriodReserveAssurance>?</brus:guaranteePeriodReserveAssurance>\r
+               <!--Optional:-->\r
+               <brus:guaranteePeriod>?</brus:guaranteePeriod>\r
+               <!--Optional:-->\r
+               <brus:generalContractingPercentage>?</brus:generalContractingPercentage>\r
+               <brus:enablePricePerPurchaseItem>?</brus:enablePricePerPurchaseItem>\r
+               <brus:paymentTermsType>?</brus:paymentTermsType>\r
+               <brus:allowPaymentStagesInBid>?</brus:allowPaymentStagesInBid>\r
+               <brus:paymentStagesPercentsInTrade>?</brus:paymentStagesPercentsInTrade>\r
+               <brus:paymentStagesPeriodInTrade>?</brus:paymentStagesPeriodInTrade>\r
+               <brus:paymentStages>\r
+                  <!--1 or more repetitions:-->\r
+                  <brus:paymentStage>\r
+                     <brus:paymentType>?</brus:paymentType>\r
+                     <brus:percents>?</brus:percents>\r
+                     <!--Optional:-->\r
+                     <brus:comment>?</brus:comment>\r
+                     <brus:paymentForm>?</brus:paymentForm>\r
+                  </brus:paymentStage>\r
+               </brus:paymentStages>\r
+               <!--Optional:-->\r
+               <brus:worksPurchaseItems>\r
+                  <!--1 or more repetitions:-->\r
+                  <brus:worksPurchaseItem>\r
+                     <!--You have a CHOICE of the next 2 items at this level-->\r
+                     <brus:sectionNumber>?</brus:sectionNumber>\r
+                     <brus:sectionTitle>?</brus:sectionTitle>\r
+                     <brus:id>?</brus:id>\r
+                     <!--Optional:-->\r
+                     <brus:workTypeCode>?</brus:workTypeCode>\r
+                     <!--Optional:-->\r
+                     <brus:productClassifierCode>?</brus:productClassifierCode>\r
+                     <brus:quantity>?</brus:quantity>\r
+                     <brus:unitCode>?</brus:unitCode>\r
+                     <!--Optional:-->\r
+                     <brus:consumptionRate>?</brus:consumptionRate>\r
+                     <!--Optional:-->\r
+                     <brus:initialWorksPrice>?</brus:initialWorksPrice>\r
+                     <brus:fixWorksPrice>?</brus:fixWorksPrice>\r
+                     <!--Optional:-->\r
+                     <brus:initialGoodsPrice>?</brus:initialGoodsPrice>\r
+                     <brus:fixGoodsPrice>?</brus:fixGoodsPrice>\r
+                     <!--Optional:-->\r
+                     <brus:comment>?</brus:comment>\r
+                  </brus:worksPurchaseItem>\r
+               </brus:worksPurchaseItems>\r
+               <!--Optional:-->\r
+               <brus:contractDraftAttachmentIds>\r
+                  <!--1 or more repetitions:-->\r
+                  <brus:contractDraftAttachmentId>?</brus:contractDraftAttachmentId>\r
+               </brus:contractDraftAttachmentIds>\r
+               <!--Optional:-->\r
+               <brus:technicalSpecificationAttachmentIds>\r
+                  <!--1 or more repetitions:-->\r
+                  <brus:technicalSpecificationAttachmentId>?</brus:technicalSpecificationAttachmentId>\r
+               </brus:technicalSpecificationAttachmentIds>\r
+               <!--Optional:-->\r
+               <brus:projectDocumentationAttachmentIds>\r
+                  <!--1 or more repetitions:-->\r
+                  <brus:projectDocumentationAttachmentId>?</brus:projectDocumentationAttachmentId>\r
+               </brus:projectDocumentationAttachmentIds>\r
+               <!--Optional:-->\r
+               <brus:workScheduleAttachmentIds>\r
+                  <!--1 or more repetitions:-->\r
+                  <brus:workScheduleAttachmentId>?</brus:workScheduleAttachmentId>\r
+               </brus:workScheduleAttachmentIds>\r
+               <!--Optional:-->\r
+               <brus:otherAttachmentIds>\r
+                  <!--1 or more repetitions:-->\r
+                  <brus:otherAttachmentId>?</brus:otherAttachmentId>\r
+               </brus:otherAttachmentIds>\r
+            </brus:lot>\r
+         </brus:lots>\r
+         <!--Optional:-->\r
+         <brus:otherAttachmentIds>\r
+            <!--1 or more repetitions:-->\r
+            <brus:otherAttachmentId>?</brus:otherAttachmentId>\r
+         </brus:otherAttachmentIds>\r
+         <!--Optional:-->\r
+         <brus:modificationReason>?</brus:modificationReason>\r
+      </brus:UploadWorksTenderRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ultimeta.ru/schemas/brusnika-1c-ws/integrationPort/UploadWorksTenderRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="6c65f30e-8727-4f93-83e7-660150fca545" isOneWay="false" action="" name="UploadWorkTypes" bindingOperationName="UploadWorkTypes" type="Request-Response" outputName="UploadWorkTypesResponse" inputName="UploadWorkTypesRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="64c35c6a-b2fe-41e5-b3ec-21ad52d353d4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <brus:UploadWorkTypesRequest>\r
+         <brus:packageId>?</brus:packageId>\r
+         <brus:workTypes>\r
+            <!--1 or more repetitions:-->\r
+            <brus:workType>\r
+               <brus:id>?</brus:id>\r
+               <brus:code>?</brus:code>\r
+               <brus:title>?</brus:title>\r
+               <!--Optional:-->\r
+               <brus:parentId>?</brus:parentId>\r
+               <brus:actual>?</brus:actual>\r
+               <!--Optional:-->\r
+               <brus:unitCode>?</brus:unitCode>\r
+            </brus:workType>\r
+         </brus:workTypes>\r
+      </brus:UploadWorkTypesRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ultimeta.ru/schemas/brusnika-1c-ws/integrationPort/UploadWorkTypesRequest"/></con:call></con:operation></con:interface><con:testSuite id="203b5328-e855-41ad-9696-9dfd83c8bd2b" name="QA"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="89ec0487-d2f8-4fbf-8f38-7f301f1359df" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Инициализация" searchProperties="true"><con:settings/><con:testStep type="request" name="projectClassifierCode" id="acf2b92b-035b-44a1-b78e-66b7eefa8e6b"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>integrationPortSoap11</con:interface><con:operation>GetDocument</con:operation><con:request name="projectClassifierCode" id="6d1a55c4-fe36-42b4-977d-ed92e38b49e5"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <brus:UploadProjectClassifierRequest>
+         <brus:packageId>99</brus:packageId>
+         <brus:projectClassifiers>
+            <!--1 or more repetitions:-->
+            <brus:projectClassifier>
+               <brus:id>99</brus:id>
+               <brus:code>99</brus:code>
+               <brus:title>клавиатура</brus:title>
+               <!--Optional:-->
+               <brus:actual>true</brus:actual>
+               <!--Optional:-->
+               <brus:contactsForWinners>99</brus:contactsForWinners>
+               <!--Optional:-->
+               <brus:address>Москва</brus:address>
+            </brus:projectClassifier>
+         </brus:projectClassifiers>
+      </brus:UploadProjectClassifierRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f0b49c2a-8e10-4627-9566-91facca848b7"/><con:credentials><con:username>test</con:username><con:password>test</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="workTypeCode" id="a2c0ea76-7fe9-47e9-8ec3-e76232543092"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>integrationPortSoap11</con:interface><con:operation>GetDocument</con:operation><con:request name="workTypeCode" id="2c69a3e9-6a04-4d66-9134-89f838f14aa0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <brus:UploadWorkTypesRequest>
+         <brus:packageId>111</brus:packageId>
+         <brus:workTypes>
+            <!--1 or more repetitions:-->
+            <brus:workType>
+               <brus:id>11</brus:id>
+               <brus:code>11</brus:code>
+               <brus:title>Благоустройство</brus:title>
+               <!--Optional:-->
+               <brus:actual>true</brus:actual>
+               <!--Optional:-->
+               <brus:unitCode>11</brus:unitCode>
+            </brus:workType>
+         </brus:workTypes>
+      </brus:UploadWorkTypesRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="8e63cc69-4224-4c25-96c0-416d78e324fb"/><con:credentials><con:username>test</con:username><con:password>test</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="procurementClassifierCode" id="489fcca9-d0e7-401d-8f27-1eaa074a1364"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>integrationPortSoap11</con:interface><con:operation>GetDocument</con:operation><con:request name="procurementClassifierCode" id="b7bf81a1-121e-4f5d-b96c-91ba81cc7c75"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <brus:UploadProcurementClassifierRequest>
+         <brus:packageId>55</brus:packageId>
+         <brus:procurementClassifiers>
+            <!--1 or more repetitions:-->
+            <brus:procurementClassifier>
+               <brus:id>55</brus:id>
+               <brus:code>55</brus:code>
+               <brus:title>мышка</brus:title>
+               <!--Optional:-->
+               <brus:actual>true</brus:actual>
+            </brus:procurementClassifier>
+         </brus:procurementClassifiers>
+      </brus:UploadProcurementClassifierRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="6feac7ad-3f6a-4cca-94f5-c1a5579d8530"/><con:credentials><con:username>test</con:username><con:password>test</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="ProductClassifierCode" id="6a052924-084a-43b2-88d4-f5e5bfbb98d9"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>integrationPortSoap11</con:interface><con:operation>GetDocument</con:operation><con:request name="ProductClassifierCode" id="00d47dbd-7b79-452c-958e-fd15c0ad8e9f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <brus:UploadProductClassifierRequest>
+         <brus:packageId>22</brus:packageId>
+         <brus:productClassifiers>
+            <!--1 or more repetitions:-->
+            <brus:productClassifier>
+               <brus:id>22</brus:id>
+               <brus:code>22</brus:code>
+               <brus:title>test</brus:title>
+               <!--Optional:-->
+               <brus:actual>true</brus:actual>
+               <!--Optional:-->
+               <brus:partNumber>22</brus:partNumber>
+               <!--Optional:-->
+               <brus:unitCode>5</brus:unitCode>
+            </brus:productClassifier>
+         </brus:productClassifiers>
+      </brus:UploadProductClassifierRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="4f4051f9-f8d5-4762-b619-cf6f6fdb15a4"/><con:credentials><con:username>test</con:username><con:password>test</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="unitCode" id="8c8c1546-3dc1-458f-bd2d-02163937c9db"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>integrationPortSoap11</con:interface><con:operation>GetDocument</con:operation><con:request name="unitCode" id="b084300a-12f3-4c2e-b05c-4496b8d7ea57"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <brus:UploadUnitsRequest>
+         <brus:packageId>15</brus:packageId>
+         <brus:units>
+            <!--1 or more repetitions:-->
+            <brus:unit>
+               <brus:id>15</brus:id>
+               <brus:code>15</brus:code>
+               <brus:title>Текст</brus:title>
+            </brus:unit>
+         </brus:units>
+      </brus:UploadUnitsRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="ba4884e5-478a-4f80-99dc-d6f5d65f0001"/><con:credentials><con:username>test</con:username><con:password>test</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="7c4b0fc9-b9ba-4e53-92ef-f4444ad0a71a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="UploadDocument" searchProperties="true"><con:settings/><con:testStep type="request" name="UploadDocument" id="134f4f3c-591f-47af-8a42-bee09f74d617"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>integrationPortSoap11</con:interface><con:operation>GetDocument</con:operation><con:request name="UploadDocument" id="3ea27706-96f9-4f76-a514-ea470d2e547a"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <brus:UploadDocumentRequest>
+         <brus:packageId>1</brus:packageId>
+         <brus:attachment>
+            <brus:fileName>Договор</brus:fileName>
+            <brus:data>MTk5My0wOS0xNSs0MzowMA==</brus:data>
+         </brus:attachment>
+      </brus:UploadDocumentRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="4427c743-1640-474d-a876-da7b17453028"/><con:credentials><con:username>test</con:username><con:password>test</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>AttachmentId</con:name><con:value>105007882</con:value></con:property></con:properties></con:testCase><con:testCase id="ae6c9c8c-9b51-434d-b33d-9790fc3ea2f9" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Загрузка тендера работ BY_ORGANIZER(UploadWorksTender )" searchProperties="true"><con:settings/><con:testStep type="request" name="UploadWorkTenderBY_ORGANIZER" id="852383cc-cb3c-433f-8226-4d3e377022f6"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>integrationPortSoap11</con:interface><con:operation>GetDocument</con:operation><con:request name="UploadWorkTenderBY_ORGANIZER" id="123993ca-5770-4463-8c48-048941717573"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <brus:UploadWorksTenderRequest>
+         <brus:packageId>187112</brus:packageId>
+         <brus:tenderId>117112</brus:tenderId>
+         <brus:registeredNumber>117112</brus:registeredNumber>
+         <brus:emailOrganizer>v.vasilev@brusnika.ru</brus:emailOrganizer>
+         <brus:title>testSOAPWorksTender</brus:title>
+         <brus:currencyCode>RUB</brus:currencyCode>
+         <brus:vatType>INCLUDED</brus:vatType>
+         <!--Optional:-->
+         <brus:notes>Хороший тендер</brus:notes>
+         <!--Optional:-->
+         <brus:lots>
+            <!--1 or more repetitions:-->
+            <brus:lot>
+               <brus:id>111712</brus:id>
+               <brus:registeredNumber>1</brus:registeredNumber>
+               <brus:title>Закупка кирпича</brus:title>
+               <!--Optional:-->
+               <brus:initialContractPrice>100000</brus:initialContractPrice>
+               <!--Optional:-->
+               <brus:description>С учетом доставки</brus:description>
+               <!--Optional:-->
+               <brus:projectClassifierCode>${#TestSuite#UploadProjectClassifier}</brus:projectClassifierCode>
+               <!--Optional:-->
+               <brus:procurementClassifierCode>${#TestSuite#UploadProcurementClassifier}</brus:procurementClassifierCode>
+               <!--Optional:-->
+               <brus:executionPeriod>60</brus:executionPeriod>
+               <!--Optional:-->
+               <brus:guaranteePeriodReserveAssurance>5</brus:guaranteePeriodReserveAssurance>
+               <!--Optional:-->
+               <brus:guaranteePeriod>5</brus:guaranteePeriod>
+               <!--Optional:-->
+               <brus:generalContractingPercentage>7</brus:generalContractingPercentage>
+               <brus:enablePricePerPurchaseItem>true</brus:enablePricePerPurchaseItem>
+               <brus:paymentTermsType>MULTISTAGE_PAYMENT_BY_ORGANIZER</brus:paymentTermsType>
+               <brus:allowPaymentStagesInBid>true</brus:allowPaymentStagesInBid>
+               <brus:paymentStagesPercentsInTrade>true</brus:paymentStagesPercentsInTrade>
+               <brus:paymentStagesPeriodInTrade>true</brus:paymentStagesPeriodInTrade>
+               <brus:paymentStages>
+                  <!--1 or more repetitions:-->
+                  <brus:paymentStage>
+                     <brus:paymentType>Аванс</brus:paymentType>
+                     <brus:percents>2</brus:percents>
+                     <!--Optional:-->
+                     <brus:comment>Частями</brus:comment>
+                     <brus:paymentForm>MONEY</brus:paymentForm>
+                  </brus:paymentStage>
+               </brus:paymentStages>
+               <!--Optional:-->
+               <brus:worksPurchaseItems>
+                 <!--1 or more repetitions:-->
+                 
+                  <brus:worksPurchaseItem>
+                     <!--You have a CHOICE of the next 2 items at this level-->
+                     <brus:sectionNumber>1</brus:sectionNumber>
+                     <brus:sectionTitle>Раздел1</brus:sectionTitle>
+                  </brus:worksPurchaseItem>
+                               
+                  <brus:worksPurchaseItem>
+                     <!--You have a CHOICE of the next 2 items at this level-->
+                     <brus:id>3</brus:id>
+                     <!--Optional:-->
+                     <brus:workTypeCode>${#TestSuite#UploadWorkTypes}</brus:workTypeCode>
+                     <!--Optional:-->
+                     <brus:productClassifierCode>${#TestSuite#UploadProductClassifier}</brus:productClassifierCode>
+                     <brus:quantity>100</brus:quantity>
+                     <brus:unitCode>${#TestSuite#UploadUnits}</brus:unitCode>
+                     <!--Optional:-->
+                     <brus:consumptionRate>1</brus:consumptionRate>
+                     <!--Optional:-->
+                     <brus:initialWorksPrice>1500</brus:initialWorksPrice>
+                     <brus:fixWorksPrice>true</brus:fixWorksPrice>
+                     <!--Optional:-->
+                     <brus:initialGoodsPrice>1000</brus:initialGoodsPrice>
+                     <brus:fixGoodsPrice>true</brus:fixGoodsPrice>
+                     <!--Optional:-->
+                     <brus:comment>Хорошая работа</brus:comment>
+                  </brus:worksPurchaseItem>               
+   
+               </brus:worksPurchaseItems>
+               <!--Optional:-->
+               <brus:contractDraftAttachmentIds>
+                  <!--1 or more repetitions:-->
+                  <brus:contractDraftAttachmentId>105007962</brus:contractDraftAttachmentId>
+               </brus:contractDraftAttachmentIds>
+               <!--Optional:-->
+               <brus:technicalSpecificationAttachmentIds>
+                  <!--1 or more repetitions:-->
+                  <brus:technicalSpecificationAttachmentId>105007882</brus:technicalSpecificationAttachmentId>
+               </brus:technicalSpecificationAttachmentIds>
+               <!--Optional:-->
+               <brus:projectDocumentationAttachmentIds>
+                  <!--1 or more repetitions:-->
+                  <brus:projectDocumentationAttachmentId>105007883</brus:projectDocumentationAttachmentId>
+               </brus:projectDocumentationAttachmentIds>
+               <!--Optional:-->
+               <brus:workScheduleAttachmentIds>
+                  <!--1 or more repetitions:-->
+                  <brus:workScheduleAttachmentId>105007884</brus:workScheduleAttachmentId>
+               </brus:workScheduleAttachmentIds>
+               <!--Optional:-->
+               <brus:otherAttachmentIds>
+                  <!--1 or more repetitions:-->
+                  <brus:otherAttachmentId>105007963</brus:otherAttachmentId>
+               </brus:otherAttachmentIds>
+            </brus:lot>
+         </brus:lots>
+         <!--Optional:-->
+         <brus:otherAttachmentIds>
+            <!--1 or more repetitions:-->
+            <brus:otherAttachmentId>105007885</brus:otherAttachmentId>
+         </brus:otherAttachmentIds>
+         <!--Optional:-->
+      </brus:UploadWorksTenderRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="ff5e40af-5063-45e2-9be5-dba5ae3b50b7"/><con:credentials><con:username>test</con:username><con:password>test</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="69ca9745-6833-4bdc-bc0d-dd427b5f1a2d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Загрузка тендера работ BY_PARTICIPANT (UploadWorksTender )" searchProperties="true"><con:settings/><con:testStep type="request" name="Загрузка тендера работ BY_PARTICIPANT (UploadWorksTender )" id="d86fb503-5c27-428f-87e6-7c77831e0b9d"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>integrationPortSoap11</con:interface><con:operation>GetDocument</con:operation><con:request name="Загрузка тендера работ BY_PARTICIPANT (UploadWorksTender )" id="2db173c2-5692-483c-acb7-ddb26c071627"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">
+<soapenv:Header/>
+<soapenv:Body>
+<brus:UploadWorksTenderRequest>
+<brus:packageId>1945</brus:packageId>
+<brus:tenderId>1945</brus:tenderId>
+<brus:registeredNumber>1945</brus:registeredNumber>
+<brus:emailOrganizer>v.vasilev@brusnika.ru</brus:emailOrganizer>
+<brus:title>testSOAPWorksTender1</brus:title>
+<brus:currencyCode>RUB</brus:currencyCode>
+<brus:vatType>INCLUDED</brus:vatType>
+<!--Optional:-->
+<brus:notes>Хороший тендер</brus:notes>
+<!--Optional:-->
+<brus:lots>
+<!--1 or more repetitions:-->
+<brus:lot>
+<brus:id>152</brus:id>
+<brus:registeredNumber>2751</brus:registeredNumber>
+<brus:title>компютеры</brus:title>
+<!--Optional:-->
+<brus:initialContractPrice>100000</brus:initialContractPrice>
+<!--Optional:-->
+<brus:description>С учетом доставки</brus:description>
+<!--Optional:-->
+<brus:projectClassifierCode>${#TestSuite#UploadProjectClassifier}</brus:projectClassifierCode>
+<!--Optional:-->
+<brus:procurementClassifierCode>${#TestSuite#UploadProcurementClassifier}</brus:procurementClassifierCode>
+<!--Optional:-->
+<brus:executionPeriod>60</brus:executionPeriod>
+<!--Optional:-->
+<brus:guaranteePeriodReserveAssurance>5</brus:guaranteePeriodReserveAssurance>
+<!--Optional:-->
+<brus:guaranteePeriod>5</brus:guaranteePeriod>
+<!--Optional:-->
+<brus:generalContractingPercentage>7</brus:generalContractingPercentage>
+<brus:enablePricePerPurchaseItem>true</brus:enablePricePerPurchaseItem>
+<brus:paymentTermsType>MULTISTAGE_PAYMENT_BY_PARTICIPANT</brus:paymentTermsType>
+
+<!--Optional:-->
+<brus:worksPurchaseItems>
+<!--1 or more repetitions:-->
+
+<brus:worksPurchaseItem>
+<!--You have a CHOICE of the next 2 items at this level-->
+<brus:sectionNumber>1</brus:sectionNumber>
+<brus:sectionTitle>Раздел1</brus:sectionTitle>
+</brus:worksPurchaseItem>
+
+<brus:worksPurchaseItem>
+<!--You have a CHOICE of the next 2 items at this level-->
+<brus:id>351</brus:id>
+<!--Optional:-->
+<brus:workTypeCode>${#TestSuite#UploadWorkTypes}</brus:workTypeCode>
+<!--Optional:-->
+<brus:productClassifierCode>${#TestSuite#UploadProductClassifier}</brus:productClassifierCode>
+<brus:quantity>100</brus:quantity>
+<brus:unitCode>15</brus:unitCode>
+<!--Optional:-->
+<brus:consumptionRate>1</brus:consumptionRate>
+<!--Optional:-->
+<brus:initialWorksPrice>1500</brus:initialWorksPrice>
+<brus:fixWorksPrice>true</brus:fixWorksPrice>
+<!--Optional:-->
+<brus:initialGoodsPrice>1000</brus:initialGoodsPrice>
+<brus:fixGoodsPrice>true</brus:fixGoodsPrice>
+<!--Optional:-->
+<brus:comment>Хорошая работа</brus:comment>
+</brus:worksPurchaseItem>
+
+</brus:worksPurchaseItems>
+<!--Optional:-->
+<brus:contractDraftAttachmentIds>
+<!--1 or more repetitions:-->
+<brus:contractDraftAttachmentId>105007722</brus:contractDraftAttachmentId>
+</brus:contractDraftAttachmentIds>
+<!--Optional:-->
+<brus:technicalSpecificationAttachmentIds>
+<!--1 or more repetitions:-->
+<brus:technicalSpecificationAttachmentId>105007726</brus:technicalSpecificationAttachmentId>
+</brus:technicalSpecificationAttachmentIds>
+<!--Optional:-->
+<brus:projectDocumentationAttachmentIds>
+<!--1 or more repetitions:-->
+<brus:projectDocumentationAttachmentId>105007727</brus:projectDocumentationAttachmentId>
+</brus:projectDocumentationAttachmentIds>
+<!--Optional:-->
+<brus:workScheduleAttachmentIds>
+<!--1 or more repetitions:-->
+<brus:workScheduleAttachmentId>105007728</brus:workScheduleAttachmentId>
+</brus:workScheduleAttachmentIds>
+<!--Optional:-->
+<brus:otherAttachmentIds>
+<!--1 or more repetitions:-->
+<brus:otherAttachmentId>105007729</brus:otherAttachmentId>
+</brus:otherAttachmentIds>
+</brus:lot>
+</brus:lots>
+<!--Optional:-->
+<brus:otherAttachmentIds>
+<!--1 or more repetitions:-->
+<brus:otherAttachmentId>105007737</brus:otherAttachmentId>
+</brus:otherAttachmentIds>
+<!--Optional:-->
+</brus:UploadWorksTenderRequest>
+</soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="8f054cfa-835c-4a5b-b92b-30a51d9c857d"/><con:credentials><con:username>test</con:username><con:password>test</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="6b526154-660d-47f5-a80e-a9619025588c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Загрузка тендера на поставку товара PREPAYMENT (UploadGoodsTender )" searchProperties="true"><con:settings/><con:testStep type="request" name="Загрузка тендера на поставку товара PREPAYMENT (UploadGoodsTender )" id="0d20f6c8-6186-466c-8139-264c0b0abe1e"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>integrationPortSoap11</con:interface><con:operation>GetDocument</con:operation><con:request name="Загрузка тендера на поставку товара PREPAYMENT (UploadGoodsTender )" id="9a853a3c-7601-4242-8de0-bbbada9ead7c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">
+<soapenv:Header/>
+<soapenv:Body>
+<brus:UploadGoodsTenderRequest>
+<brus:packageId>3211</brus:packageId>
+<brus:tenderId>3211</brus:tenderId>
+<brus:registeredNumber>3211</brus:registeredNumber>
+<brus:title>Загрузка тендера на поставку товара SOAP request PREPAYMENT2 </brus:title>
+<brus:emailOrganizer>v.vasilev@brusnika.ru</brus:emailOrganizer>
+<brus:vatType>INCLUDED</brus:vatType>
+<brus:currencyCode>RUB</brus:currencyCode>
+<brus:lots>
+<!--1 or more repetitions:-->
+<brus:lot>
+<brus:id>3211</brus:id>
+<brus:registeredNumber>3211</brus:registeredNumber>
+<brus:title>Монитор</brus:title>
+<!--Optional:-->
+<brus:projectClassifierCode>${#TestSuite#UploadProjectClassifier}</brus:projectClassifierCode>
+<!--Optional:-->
+<brus:procurementClassifierCode>${#TestSuite#UploadProcurementClassifier}</brus:procurementClassifierCode>
+<brus:enablePricePerPurchaseItem>true</brus:enablePricePerPurchaseItem>
+<brus:paymentTermsType>PREPAYMENT</brus:paymentTermsType>
+
+<!--1 or more repetitions:-->
+<brus:goodsPurchaseItems>
+
+<brus:goodsPurchaseItem>
+<brus:id>3</brus:id>
+<!--Optional:-->
+<brus:productClassifierCode>${#TestSuite#UploadProductClassifier}</brus:productClassifierCode>
+<!--Optional:-->
+<brus:characteristics>max</brus:characteristics>
+<brus:quantity>100</brus:quantity>
+<brus:unitCode>5</brus:unitCode>
+<!--Optional:-->
+<brus:price>60</brus:price>
+<!--Optional:-->
+<brus:deliveryPeriod>1 мес</brus:deliveryPeriod>
+<!--Optional:-->
+<brus:comment>быстрая доставка</brus:comment>
+</brus:goodsPurchaseItem>
+</brus:goodsPurchaseItems>
+<!--Optional:-->
+<brus:otherAttachmentIds>
+<!--1 or more repetitions:-->
+<brus:otherAttachmentId>105007804</brus:otherAttachmentId>
+</brus:otherAttachmentIds>
+</brus:lot>
+</brus:lots>
+<!--Optional:-->
+<brus:notes>быстрая доставка</brus:notes>
+<!--Optional:-->
+<brus:otherAttachmentIds>
+<!--1 or more repetitions:-->
+<brus:otherAttachmentId>105007803</brus:otherAttachmentId>
+</brus:otherAttachmentIds>
+<!--Optional:-->
+<brus:modificationReason>Срок</brus:modificationReason>
+</brus:UploadGoodsTenderRequest>
+</soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="9356261b-4b5d-4995-83a1-59209435f8ee"/><con:credentials><con:username>test</con:username><con:password>test</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="1d6e927b-c132-4b79-bccb-4360f2448e9c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Загрузка тендера на поставку товара DELAYED_PAYMENT (UploadGoodsTender )" searchProperties="true"><con:settings/><con:testStep type="request" name="Загрузка тендера на поставку товара DELAYED_PAYMENT (UploadGoodsTender )" id="6e491e87-1f6c-4814-9192-9054c332513f"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>integrationPortSoap11</con:interface><con:operation>GetDocument</con:operation><con:request name="Загрузка тендера на поставку товара DELAYED_PAYMENT (UploadGoodsTender )" id="83664afb-e7af-4e77-b47e-1735cd988d37"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">
+<soapenv:Header/>
+<soapenv:Body>
+<brus:UploadGoodsTenderRequest>
+<brus:packageId>2214</brus:packageId>
+<brus:tenderId>2214</brus:tenderId>
+<brus:registeredNumber>2214</brus:registeredNumber>
+<brus:title>Загрузка тендера на поставку товара SOAP request DELAYED_PAYMENT 2</brus:title>
+<brus:emailOrganizer>v.vasilev@brusnika.ru</brus:emailOrganizer>
+<brus:vatType>INCLUDED</brus:vatType>
+<brus:currencyCode>RUB</brus:currencyCode>
+<brus:lots>
+<!--1 or more repetitions:-->
+<brus:lot>
+<brus:id>2214</brus:id>
+<brus:registeredNumber>2214</brus:registeredNumber>
+<brus:title>Монитор</brus:title>
+<!--Optional:-->
+<brus:projectClassifierCode>${#TestSuite#UploadProjectClassifier}</brus:projectClassifierCode>
+<!--Optional:-->
+<brus:procurementClassifierCode>${#TestSuite#UploadProcurementClassifier}</brus:procurementClassifierCode>
+<brus:enablePricePerPurchaseItem>true</brus:enablePricePerPurchaseItem>
+<brus:paymentTermsType>DELAYED_PAYMENT</brus:paymentTermsType>
+<brus:paymentDelayTerms>6</brus:paymentDelayTerms>
+<brus:allowPaymentDelayTermsInBid>true</brus:allowPaymentDelayTermsInBid>
+<!--1 or more repetitions:-->
+<brus:goodsPurchaseItems>
+<brus:goodsPurchaseItem>
+<brus:id>1121</brus:id>
+<!--Optional:-->
+<brus:productClassifierCode>${#TestSuite#UploadProductClassifier}</brus:productClassifierCode>
+<!--Optional:-->
+<brus:characteristics>max</brus:characteristics>
+<brus:quantity>100</brus:quantity>
+<brus:unitCode>${#TestSuite#UploadUnits}</brus:unitCode>
+<!--Optional:-->
+<brus:price>60</brus:price>
+<!--Optional:-->
+<brus:deliveryPeriod>1 мес</brus:deliveryPeriod>
+<!--Optional:-->
+<brus:comment>быстрая доставка</brus:comment>
+</brus:goodsPurchaseItem>
+</brus:goodsPurchaseItems>
+<!--Optional:-->
+<brus:otherAttachmentIds>
+<!--1 or more repetitions:-->
+<brus:otherAttachmentId>105007804</brus:otherAttachmentId>
+</brus:otherAttachmentIds>
+</brus:lot>
+</brus:lots>
+<!--Optional:-->
+<brus:notes>быстрая доставка</brus:notes>
+<!--Optional:-->
+<brus:otherAttachmentIds>
+<!--1 or more repetitions:-->
+<brus:otherAttachmentId>105007803</brus:otherAttachmentId>
+</brus:otherAttachmentIds>
+<!--Optional:-->
+<brus:modificationReason>Срок</brus:modificationReason>
+</brus:UploadGoodsTenderRequest>
+</soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="19ef04a7-2dab-4512-9e01-0d1c0870289d"/><con:credentials><con:username>test</con:username><con:password>test</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="94e5d75a-3671-42db-911d-ee4f1c328271" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Загрузка тендера на поставку товара BY_ORGANIZER (UploadGoodsTender )" searchProperties="true"><con:settings/><con:testStep type="request" name="Загрузка тендера на поставку товара BY_ORGANIZER (UploadGoodsTender )" id="783d449c-7d0a-47d8-8a3a-8456cccc8645"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>integrationPortSoap11</con:interface><con:operation>GetDocument</con:operation><con:request name="Загрузка тендера на поставку товара BY_ORGANIZER (UploadGoodsTender )" id="358aedf7-9f73-4107-9417-e994582f3387"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">
+<soapenv:Header/>
+<soapenv:Body>
+<brus:UploadGoodsTenderRequest>
+<brus:packageId>25</brus:packageId>
+<brus:tenderId>25</brus:tenderId>
+<brus:registeredNumber>25</brus:registeredNumber>
+<brus:title>Загрузка тендера на поставку товара SOAP request BY_ORGANIZER 1 </brus:title>
+<brus:emailOrganizer>v.vasilev@brusnika.ru</brus:emailOrganizer>
+<brus:vatType>INCLUDED</brus:vatType>
+<brus:currencyCode>RUB</brus:currencyCode>
+<brus:lots>
+<!--1 or more repetitions:-->
+<brus:lot>
+<brus:id>25</brus:id>
+<brus:registeredNumber>25</brus:registeredNumber>
+<brus:title>Клавиатура</brus:title>
+<!--Optional:-->
+<brus:projectClassifierCode>${#TestSuite#UploadProjectClassifier}</brus:projectClassifierCode>
+<!--Optional:-->
+<brus:procurementClassifierCode>5</brus:procurementClassifierCode>
+<brus:enablePricePerPurchaseItem>true</brus:enablePricePerPurchaseItem>
+<brus:paymentTermsType>MULTISTAGE_PAYMENT_BY_ORGANIZER</brus:paymentTermsType>
+ <brus:allowPaymentStagesInBid>true</brus:allowPaymentStagesInBid>
+               <brus:paymentStagesPercentsInTrade>true</brus:paymentStagesPercentsInTrade>
+               <brus:paymentStagesPeriodInTrade>true</brus:paymentStagesPeriodInTrade>
+               <brus:paymentStages>
+                  <!--1 or more repetitions:-->
+                  <brus:paymentStage>
+                     <brus:paymentType>Аванс</brus:paymentType>
+                     <brus:percents>20</brus:percents>
+                     <!--Optional:-->
+                     <brus:comment>хорошее качество</brus:comment>
+                  </brus:paymentStage>
+               </brus:paymentStages>
+
+<!--1 or more repetitions:-->
+<brus:goodsPurchaseItems>
+<brus:goodsPurchaseItem>
+<brus:id>322</brus:id>
+<!--Optional:-->
+<brus:productClassifierCode>${#TestSuite#UploadProductClassifier}</brus:productClassifierCode>
+<!--Optional:-->
+<brus:characteristics>max</brus:characteristics>
+<brus:quantity>150</brus:quantity>
+<brus:unitCode>5</brus:unitCode>
+<!--Optional:-->
+<brus:price>1000</brus:price>
+<!--Optional:-->
+<brus:deliveryPeriod>1 мес</brus:deliveryPeriod>
+<!--Optional:-->
+<brus:comment>быстрая доставка</brus:comment>
+</brus:goodsPurchaseItem>
+</brus:goodsPurchaseItems>
+<!--Optional:-->
+<brus:otherAttachmentIds>
+<!--1 or more repetitions:-->
+<brus:otherAttachmentId>105007804</brus:otherAttachmentId>
+</brus:otherAttachmentIds>
+</brus:lot>
+</brus:lots>
+<!--Optional:-->
+<brus:notes>быстрая доставка</brus:notes>
+<!--Optional:-->
+<brus:otherAttachmentIds>
+<!--1 or more repetitions:-->
+<brus:otherAttachmentId>105007803</brus:otherAttachmentId>
+</brus:otherAttachmentIds>
+<!--Optional:-->
+<brus:modificationReason>Срок</brus:modificationReason>
+</brus:UploadGoodsTenderRequest>
+</soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="6e8bb41c-33fd-461b-90b2-742c43be9438"/><con:credentials><con:username>test</con:username><con:password>test</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="60eba4c7-39ee-47f6-9bad-8d05555c260b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Загрузка тендера на поставку товара BY_PARTICIPANT (UploadGoodsTender )" searchProperties="true"><con:settings/><con:testStep type="request" name="Загрузка тендера на поставку товара BY_PARTICIPANT (UploadGoodsTender )" id="c59d2cfd-8068-46d3-b674-27215f9e6b11"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>integrationPortSoap11</con:interface><con:operation>GetDocument</con:operation><con:request name="Загрузка тендера на поставку товара BY_PARTICIPANT (UploadGoodsTender )" id="ab6ba9bc-6088-465b-bafa-dac7e6122c0b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">
+<soapenv:Header/>
+<soapenv:Body>
+<brus:UploadGoodsTenderRequest>
+<brus:packageId>391</brus:packageId>
+<brus:tenderId>931</brus:tenderId>
+<brus:registeredNumber>31</brus:registeredNumber>
+<brus:title>Загрузка тендера на поставку товара SOAP request PREPAYMENT 4 </brus:title>
+<brus:emailOrganizer>v.vasilev@brusnika.ru</brus:emailOrganizer>
+<brus:vatType>INCLUDED</brus:vatType>
+<brus:currencyCode>RUB</brus:currencyCode>
+<brus:lots>
+<!--1 or more repetitions:-->
+<brus:lot>
+<brus:id>391</brus:id>
+<brus:registeredNumber>391</brus:registeredNumber>
+<brus:title>Клавиатура</brus:title>
+<!--Optional:-->
+<brus:projectClassifierCode>${#TestSuite#UploadProjectClassifier}</brus:projectClassifierCode>
+<!--Optional:-->
+<brus:procurementClassifierCode>${#TestSuite#UploadProcurementClassifier}</brus:procurementClassifierCode>
+<brus:enablePricePerPurchaseItem>true</brus:enablePricePerPurchaseItem>
+<brus:paymentTermsType>MULTISTAGE_PAYMENT_BY_PARTICIPANT</brus:paymentTermsType>
+<!--1 or more repetitions:-->
+<brus:goodsPurchaseItems>
+<brus:goodsPurchaseItem>
+<brus:id>351</brus:id>
+<!--Optional:-->
+<brus:productClassifierCode>${#TestSuite#UploadProductClassifier}</brus:productClassifierCode>
+<!--Optional:-->
+<brus:characteristics>max</brus:characteristics>
+<brus:quantity>150</brus:quantity>
+<brus:unitCode>5</brus:unitCode>
+<!--Optional:-->
+<brus:price>1000</brus:price>
+<!--Optional:-->
+<brus:deliveryPeriod>1 мес</brus:deliveryPeriod>
+<!--Optional:-->
+<brus:comment>быстрая доставка</brus:comment>
+</brus:goodsPurchaseItem>
+</brus:goodsPurchaseItems>
+<!--Optional:-->
+<brus:otherAttachmentIds>
+<!--1 or more repetitions:-->
+<brus:otherAttachmentId>105007804</brus:otherAttachmentId>
+</brus:otherAttachmentIds>
+</brus:lot>
+</brus:lots>
+<!--Optional:-->
+<brus:notes>быстрая доставка</brus:notes>
+<!--Optional:-->
+<brus:otherAttachmentIds>
+<!--1 or more repetitions:-->
+<brus:otherAttachmentId>105007803</brus:otherAttachmentId>
+</brus:otherAttachmentIds>
+<!--Optional:-->
+<brus:modificationReason>Срок</brus:modificationReason>
+</brus:UploadGoodsTenderRequest>
+</soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="613972be-f1b9-4530-862d-1cc8e2d24066"/><con:credentials><con:username>test</con:username><con:password>test</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2ab5f83d-23fb-4310-812a-0f7c44d3c185" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Отмена лота (GetLotCancelDecision)" searchProperties="true"><con:settings/><con:testStep type="request" name="Отмена лота (GetLotCancelDecision)" id="39b316b4-0587-421b-8b9a-5743246decbc"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>integrationPortSoap11</con:interface><con:operation>GetDocument</con:operation><con:request name="Отмена лота (GetLotCancelDecision)" id="f455ff43-9247-46a1-9000-0b6a32290e62"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://brusnika.demo.ultimeta.ru:443/ws/brusnika-1c</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:brus="http://ultimeta.ru/schemas/brusnika-1c">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <brus:GetLotCancelDecisionRequest>
+         <brus:packageId>32</brus:packageId>
+         <brus:messageId>a710415c-71b6-435f-a6d4-2df5d1a72425</brus:messageId>
+      </brus:GetLotCancelDecisionRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="db79d54a-83cc-41ca-9fd2-24220ec92f28"/><con:credentials><con:username>test</con:username><con:password>test</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>UploadProjectClassifier</con:name><con:value>99</con:value></con:property><con:property><con:name>UploadProcurementClassifier</con:name><con:value>55</con:value></con:property><con:property><con:name>UploadWorkTypes</con:name><con:value>11</con:value></con:property><con:property><con:name>UploadUnits</con:name><con:value>15</con:value></con:property><con:property><con:name>UploadProductClassifier</con:name><con:value>22</con:value></con:property></con:properties></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
