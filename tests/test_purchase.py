@@ -73,9 +73,6 @@ class TestPurchaseGood(BaseTest):
         self.user_menu.open_user_menu.logout()
         self.purchase_page_organizer.open()
         self.frame_page.login_organizer()
-
-
-
         self.purchase_page_organizer.click_button_approve_results_vote()
         self.purchase_page_organizer.click_button_approve_protocol_results()
         self.purchase_page_organizer.click_button_approve()
