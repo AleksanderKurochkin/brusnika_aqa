@@ -4,19 +4,18 @@ import os
 import time
 import allure
 from allure_commons.types import AttachmentType
-from selenium.common import TimeoutException
+from selenium.common import TimeoutException, ElementClickInterceptedException
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.remote.webdriver import WebElement
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver import ActionChains
+from selenium.webdriver import ActionChains, Keys
 from faker import Faker
 from data.credentials import Credentials
 
-
 fake = Faker()
 
-#setTimeout(function() { debugger; }, 5000);
+
 class UIHelper:
 
     def __init__(self, driver):
@@ -24,7 +23,6 @@ class UIHelper:
         self.wait = WebDriverWait(self.driver, timeout=10, poll_frequency=1)
         self.actions = ActionChains(self.driver)
         self.credentials = Credentials()
-
 
     def open(self):
         with allure.step(f"Open page: {self._PAGE_URL}"):
@@ -71,6 +69,25 @@ class UIHelper:
         element = self.wait.until(EC.element_to_be_clickable(locator))
         element.click()
 
+    def method_click(self, locator):
+        locator_type, locator_value = locator
+        print("ЛОКАТОР ВАЛЮЕ ", locator_type)
+        script = """
+                function clickElementByXPath(xpath) {
+                    var element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+                    if (element) {
+                        element.click();
+                    } else {
+                        console.error("Element not found for XPath:", xpath);
+                    }
+                }
+                    clickElementByXPath(arguments[0]);
+                    """
+        print("CRHBGN", script)
+        self.driver.execute_script(script, locator_value)
+
+
+
     def load_file(self, locator: tuple, name_file: str):
         file_path = os.path.join(os.getcwd(), 'files', name_file)
         element = self.wait_presence_of_element_located(locator)
@@ -111,11 +128,10 @@ class UIHelper:
 
     def wait_and_click(self, locator):
         try:
-            # Ожидаем, пока элемент не станет видимым
             button = WebDriverWait(self.driver, 60, poll_frequency=10).until(
                 EC.visibility_of_element_located(locator)
             )
-            button.click()  # Нажимаем на кнопку после ожидания
+            button.click()
         except TimeoutException:
             print(f"Не удалось дождаться видимости элемента: {locator}")
 
@@ -157,19 +173,30 @@ class UIHelper:
         });
         """)
 
-
     ## --data generators--
 
     def fill_date_ant_time_plus_3_min(self, locator_data, locator_time):
-        current_date = datetime.now().strftime('%d/%m/%Y')
+        current_date = datetime.now().strftime('%d.%m.%Y')
         time_plus_3_min = (datetime.now() + timedelta(minutes=3)).strftime('%H:%M')
         self.find(locator_data).send_keys(current_date)
         self.find(locator_time).send_keys(time_plus_3_min)
 
     def fill_date_ant_time_current(self, locator_data, locator_time):
-        current_date = datetime.now().strftime('%d/%m/%Y')
+        current_date = datetime.now().strftime('%d.%m.%Y')
         current_time = datetime.now().strftime('%H:%M')
-        self.find(locator_data).send_keys(current_date)
-        self.find(locator_time).send_keys(current_time)
+        date_element = self.find(locator_data)
+        date_element.send_keys(Keys.CONTROL, 'a')
+        date_element.send_keys(Keys.DELETE)
+        date_element.send_keys(current_date)
+        time_element = self.find(locator_time)
+        time_element.send_keys(current_time)
 
-
+    def fill_date_ant_time_minus_1_min(self, locator_data, locator_time):
+        current_date = datetime.now().strftime('%d.%m.%Y')
+        time_plus_3_min = (datetime.now() - timedelta(minutes=1)).strftime('%H:%M')
+        date_element = self.find(locator_data)
+        date_element.send_keys(Keys.CONTROL, 'a')
+        date_element.send_keys(Keys.DELETE)
+        date_element.send_keys(current_date)
+        time_element = self.find(locator_time)
+        time_element.send_keys(time_plus_3_min)

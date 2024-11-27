@@ -1,4 +1,4 @@
-
+from datetime import datetime, timedelta
 from base.base_page import BasePage
 import allure
 import os
@@ -40,9 +40,13 @@ class CreatePurchaseGoodTender(BasePage):
     _BID_SUBMISSION_END_DATE = "//um-date-time-field[contains(@class, 'field_bidSubmissionEndDate ')]//input[@formcontrolname='date']"
     _BID_SUBMISSION_END_DATE_TIME = "//um-date-time-field[contains(@class, 'field_bidSubmissionEndDate ')]//input[@formcontrolname='time']"
 
+    _BID_SUBMISSION_START_DATE = "//um-date-time-field[contains(@class, 'field_bidSubmissionStartDate')]//input[@formcontrolname='date']"
+    _BID_SUBMISSION_START_TIME = "//um-date-time-field[contains(@class, 'field_bidSubmissionStartDate')]//input[@formcontrolname='time']"
+
+
 
     #--DATA
-    _TITLE = "AQA_Закупка_ТМЦ"
+    _TITLE = f"AQA_Закупка_ТМЦ {datetime.now().strftime('%d.%m.%Y')} {datetime.now().strftime('%H:%M')}"
     _REGION = "Москва"
     _PROCUREMENT_CATEGORY = "Procurement"
     _TITLE_POSITION = "Вентилятор"
@@ -125,7 +129,9 @@ class CreatePurchaseGoodTender(BasePage):
     def fill_bid_submission_end_date_current(self):
         self.fill_date_ant_time_current(self._BID_SUBMISSION_END_DATE, self._BID_SUBMISSION_END_DATE_TIME)
 
-
+    @allure.step("Заполнить 'Начало представления предложений - 1 мин'")
+    def fill_bid_submission_start_date(self):
+        self.fill_date_ant_time_minus_1_min(self._BID_SUBMISSION_START_DATE, self._BID_SUBMISSION_START_TIME)
 
     @allure.step("Нажать кнопку 'Посмотреть и утвердить'")
     def click_approve_button(self):

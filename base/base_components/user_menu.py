@@ -20,20 +20,20 @@ class UserMenu(UIHelper, metaclass=MetaLocator):
 
     @allure.step("Открыть Мой профиль")
     def open_my_profile_page(self):
-        time.sleep(3) #! TODO
+        time.sleep(2) #! TODO
         self.click_on_element(self._MY_PROFILE)
 
     @allure.step("Открыть Моя организация")
     def open_my_organization_page(self):
-        time.sleep(3)  # ! TODO
+        time.sleep(2)  # ! TODO
         self.click_on_element(self._MY_ORGANIZATION)
 
     @allure.step("Открыть Мои рассылки")
     def open_my_mailing_page(self):
-        time.sleep(3)  # ! TODO
+        time.sleep(2)  # ! TODO
         self.click_on_element(self._MY_MAILING)
 
     @allure.step("Разлогинится Выход")
     def logout(self):
-        time.sleep(3)  # ! TODO
+        time.sleep(2)  # ! TODO
         self.click_on_element(self._LOGOUT)

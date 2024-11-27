@@ -70,7 +70,7 @@ class PurchasePageParticipant(BasePage):
         self.choice_suppler_state()
         self.fill_prepayment_percent()
         self.load_commercial_offer_attachments()
-        time.sleep(5)  # TODO
+        time.sleep(2)
         self.click_button_sabmit_offer()
         self.click_button_sabmit_offer_confirmation()
 

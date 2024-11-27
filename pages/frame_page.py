@@ -6,6 +6,8 @@ from base.base_page import BasePage
 from helpers.UI_helper import UIHelper
 from data.links import Links
 from data.credentials import Credentials
+from base.base_components.user_menu import UserMenu
+from pages.purchase_page.purchase_page_organizer import PurchasePageOrganizer
 
 
 class FramePage(BasePage):
@@ -37,7 +39,26 @@ class FramePage(BasePage):
         self.fill(self._FIELD_PASSWORD_LOCATOR, Credentials.PASSWORD)
         self.click_on_element(self._BUTTON_NEXT_LOCATOR)
 
+    @allure.step("Вводим логин и пароль первого члена комиссии")
+    def login_committee_member_one(self):
+        self.click_on_element(self._BUTTON_LOGIN_LOCATOR)
+        self.fill(self._FIELD_LOGIN_LOCATOR, Credentials.LOGIN_COMMITTEE_MEMBER_ONE)
+        self.fill(self._FIELD_PASSWORD_LOCATOR, Credentials.PASSWORD)
+        self.click_on_element(self._BUTTON_NEXT_LOCATOR)
 
+    @allure.step("Вводим логин и пароль второго члена комиссии")
+    def login_committee_member_two(self):
+        self.click_on_element(self._BUTTON_LOGIN_LOCATOR)
+        self.fill(self._FIELD_LOGIN_LOCATOR, Credentials.LOGIN_COMMITTEE_MEMBER_TWO)
+        self.fill(self._FIELD_PASSWORD_LOCATOR, Credentials.PASSWORD)
+        self.click_on_element(self._BUTTON_NEXT_LOCATOR)
+
+    @allure.step("Вводим логин и пароль председателя комиссии")
+    def login_committee_chairman(self):
+        self.click_on_element(self._BUTTON_LOGIN_LOCATOR)
+        self.fill(self._FIELD_LOGIN_LOCATOR, Credentials.LOGIN_COMMITTEE_CHAIRMAN)
+        self.fill(self._FIELD_PASSWORD_LOCATOR, Credentials.PASSWORD)
+        self.click_on_element(self._BUTTON_NEXT_LOCATOR)
 
         # Метод с подгрузкой cookies #!TODO
         # if os.path.exists("cookies/login_cookies.pkl"):
@@ -49,5 +70,3 @@ class FramePage(BasePage):
         #     self.fill(self._FIELD_PASSWORD_LOCATOR, self.credentials.PASSWORD)
         #     self.click_on_element(self._BUTTON_NEXT_LOCATOR)
         #     self.save_cookies("login_cookies")
-
-

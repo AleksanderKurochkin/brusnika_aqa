@@ -6,6 +6,7 @@ from base.base_components.purchases import PurchasesMenu
 from pages.create_purchase_page.create_purchase_good_tender import CreatePurchaseGoodTender
 from pages.purchase_page.purchase_page_organizer import PurchasePageOrganizer
 from pages.purchase_page.purchase_page_participant import PurchasePageParticipant
+from pages.voting_page import VotingPages
 
 class BaseTest:
 
@@ -17,6 +18,7 @@ class BaseTest:
         self.create_purchase_good_tender = CreatePurchaseGoodTender(self.driver)
         self.purchase_page_organizer = PurchasePageOrganizer(self.driver)
         self.purchase_page_participant = PurchasePageParticipant(self.driver)
+        self.voting_page = VotingPages(self.driver)
 
 
         self.user_menu = UserMenu(self.driver)
