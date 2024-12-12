@@ -1,18 +1,15 @@
-from datetime import datetime, timedelta
+from datetime import datetime
 from base.base_page import BasePage
 import allure
-import os
-import time
 
 
 class CreatePurchaseGoodTender(BasePage):
-
-
+    # -- Field --
     _FIELD_TITLE = "//input[@id='mat-input-3']"
-    _FIELD_REGION = "//input[@id='mat-chip-list-input-0']"
-    _FIELD_PROCUREMENT_CATEGORY = "//input[@id='mat-chip-list-input-1']"
+    _FIELD_REGION = "//um-combo-box-field[contains(@class, 'destinationRegion')]//input"
+    _FIELD_PROCUREMENT_CATEGORY = "//um-combo-box-field[contains(@class, 'procurementClassifier')]//input"
 
-    #--Grid
+    #--- Grid ---
     _FIELD_TITLE_POSITION = ("//kendo-grid-list//tr[@data-kendo-grid-item-index='0']//td[@aria-colindex='2']//div["
                              "@class='mat-tooltip-trigger grid-cell__wrapper']")
     _INPUT_TITLE_POSITION = "//kendo-grid-list//tr[@data-kendo-grid-item-index='0']//input[@role='combobox']"
@@ -21,11 +18,10 @@ class CreatePurchaseGoodTender(BasePage):
     _INPUT_QUANTITY_POSITION = "//kendo-grid-list//tr[@data-kendo-grid-item-index='0']//input[@tabindex='0']"
     _FIELD_ESTIMATED_GOOD_PRICE = "//kendo-grid-list//tr[@data-kendo-grid-item-index='0']//td[@aria-colindex='6']//div[@class='mat-tooltip-trigger grid-cell__wrapper']"
     _INPUT_ESTIMATED_GOOD_PRICE = "//kendo-grid-list//tr[@data-kendo-grid-item-index='0']//input[@tabindex='0']"
-    _FIELD_SUBMISSION_FORM = "//mat-select[@id='mat-select-10']"
-    _FIELD_PURCHASE_TERMS = "//mat-card-title[contains(text(), 'Условия договора')]/following-sibling::*//input[@id='mat-chip-list-input-3']"
-    _FIELD_PAYMENT_TERMS_TYPE = "//mat-select[@id='mat-select-12']"
-    _FIELD_EDIT_PURCHASE = "//textarea[@id=(//mat-label[contains(text(), 'Обоснование внесения изменений')]/ancestor::label/@for)]"
-
+    _FIELD_SUBMISSION_FORM = "//um-select-field[contains(@class, 'submissionForm ')]// mat-select"
+    _FIELD_PURCHASE_TERMS = "//um-combo-box-field[contains(@class, 'purchaseTerms ')]//input"
+    _FIELD_PAYMENT_TERMS_TYPE = "//um-select-field[contains(@class, 'paymentTermsType ')]//mat-select"
+    _FIELD_EDIT_PURCHASE = "//um-textarea-field[contains(@class, 'field_modificationReason')]//textarea"
     _BUTTON_ADD = "//kendo-grid[@class='virtual-scroll k-grid k-grid-virtual']//span[text()='Добавить']"
 
     _LOCATOR_REGION = "//span[contains(text(), 'Москва')]"
@@ -39,11 +35,8 @@ class CreatePurchaseGoodTender(BasePage):
     _PARTICIPATION_CONFIRMATION_END_DATE_TIME = "//um-date-time-field[contains(@class, 'field_participationConfirmationEndDate')]//input[@formcontrolname='time']"
     _BID_SUBMISSION_END_DATE = "//um-date-time-field[contains(@class, 'field_bidSubmissionEndDate ')]//input[@formcontrolname='date']"
     _BID_SUBMISSION_END_DATE_TIME = "//um-date-time-field[contains(@class, 'field_bidSubmissionEndDate ')]//input[@formcontrolname='time']"
-
     _BID_SUBMISSION_START_DATE = "//um-date-time-field[contains(@class, 'field_bidSubmissionStartDate')]//input[@formcontrolname='date']"
     _BID_SUBMISSION_START_TIME = "//um-date-time-field[contains(@class, 'field_bidSubmissionStartDate')]//input[@formcontrolname='time']"
-
-
 
     #--DATA
     _TITLE = f"AQA_Закупка_ТМЦ {datetime.now().strftime('%d.%m.%Y')} {datetime.now().strftime('%H:%M')}"
@@ -54,12 +47,10 @@ class CreatePurchaseGoodTender(BasePage):
     _ESTIMATED_GOOD_PRICE = "2000"
 
     #--Кнопки
-    _BUTTON_APPROVE = "//span[text()= 'Просмотреть и утвердить']"
+    _BUTTON_APPROVE = "//mat-toolbar-row[contains(@class, 'star-inserted')]//a[contains(@class, 'mat-flat-button')]"
     _BUTTON_CONTINUE_WITHOUT_INVITATION = "//span[contains(text(), 'Продолжить без приглашения')]"
     _BUTTON_APPROVE_AND_DECLARE = "//span[contains(text(), 'Утвердить и объявить')]"
     _EDIT_PURCHASE = "Изменение времени"
-
-    _INPUT_GRID = "//kendo-grid[@dir='ltr']//input[@type='file'][1]"
 
     @allure.step("Заполняем 'Наименование (предмет закупки)'")
     def fill_title(self):
@@ -69,19 +60,11 @@ class CreatePurchaseGoodTender(BasePage):
     def fill_region(self):
         self.fill(self._FIELD_REGION, self._REGION)
         self.find(self._LOCATOR_REGION).click()
-        time.sleep(3)
-
-
-    @allure.step("Загрузка 'Спецификацию поставки'") ##TODO
-    def load_delivery_specification(self):
-        specification = self.find(self._INPUT_GRID)
-        specification.send_keys(os.path.join(os.getcwd(), "Specification.xlsx"))
 
     @allure.step("Заполняем 'Категорию закупки'")
     def fill_procurement_category(self):
         self.fill(self._FIELD_PROCUREMENT_CATEGORY, self._PROCUREMENT_CATEGORY)
         self.find(self._LOCATOR_PROCUREMENT_CATEGORY).click()
-        time.sleep(3)
 
     @allure.step("Добавление строки в 'Спецификацию поставки'")
     def add_string_delivery_specification(self):
@@ -161,6 +144,7 @@ class CreatePurchaseGoodTender(BasePage):
         self.fill_pyment_terms_type()
         self.fill_participation_confirmation_end_date()
         self.fill_bid_submission_end_date()
+
 
 
 

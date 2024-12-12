@@ -71,7 +71,6 @@ class UIHelper:
 
     def method_click(self, locator):
         locator_type, locator_value = locator
-        print("ЛОКАТОР ВАЛЮЕ ", locator_type)
         script = """
                 function clickElementByXPath(xpath) {
                     var element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
@@ -83,7 +82,6 @@ class UIHelper:
                 }
                     clickElementByXPath(arguments[0]);
                     """
-        print("CRHBGN", script)
         self.driver.execute_script(script, locator_value)
 
 
@@ -200,3 +198,21 @@ class UIHelper:
         date_element.send_keys(current_date)
         time_element = self.find(locator_time)
         time_element.send_keys(time_plus_3_min)
+
+    # --- Togglers ---
+
+    def toggle_on(self, locator_checkbox, locator_button):
+        element_checkbox = self.find(locator_checkbox)
+        if element_checkbox.get_attribute("aria-checked") == "false":
+            element_button = self.find(locator_button)
+            element_button.click()
+        elif element_checkbox.get_attribute("aria-checked") == "true":
+            pass
+
+    def toggle_off(self, locator_checkbox, locator_button):
+        element_checkbox = self.find(locator_checkbox)
+        if element_checkbox.get_attribute("aria-checked") == "true":
+            element_button = self.find(locator_button)
+            element_button.click()
+        elif element_checkbox.get_attribute("aria-checked") == "false":
+            pass

@@ -5,7 +5,7 @@ import allure
 
 class PurchasePageOrganizer(BasePage):
     _PAGE_URL = None
-    _PAGE_URL = ("https://brusnika-qa.demo.ultimeta.ru/trades/100809964")
+    _PAGE_URL = ("https://brusnika-qa.demo.ultimeta.ru/trades/100810129")
 
     _BUTTON_RESULT = "//span[text() = 'Подвести итоги']"
     _BUTTON_EDIT_PURCHASE = "//span[text() = 'Внести изменения']"
@@ -77,8 +77,7 @@ class PurchasePageOrganizer(BasePage):
 
     @allure.step("Выбрать коммисию ТК Демо коммисия 1")
     def choose_tk(self):
-        print("КЛИИИИИК")
-        time.sleep(2)
+        time.sleep(1) #TODO
         self.method_click(self._FIELD_CHOOSE_TK)
         self.click_on_element(self._TK_DEMO_ONE)
         self.click_on_element(self._BUTTON_APPOINT_TK_DIALOG)
