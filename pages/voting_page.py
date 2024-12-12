@@ -1,9 +1,12 @@
+import time
+
 import allure
 from base.base_page import BasePage
 
 class VotingPages(BasePage):
-    _BUTTON_VOTE = "//mat-toolbar//span[text() = 'Голосование']"
-    _BUTTON_ZA = "//button[.//span[text() = 'За']]"
+
+    _BUTTON_VOTE = "//mat-toolbar//span[contains(text(), 'Голосование')]"
+    _BUTTON_ZA = "//mat-button-toggle-group//mat-button-toggle[@value='AGREE']//button"
     _BUTTON_VOTING = "//button[.//span[contains(text(), 'Проголосовать')]]"
 
     @allure.step("Нажать кнопку 'Голосование'")
@@ -21,6 +24,7 @@ class VotingPages(BasePage):
     @allure.step("Голосование члена комиссии")
     def voting_committee_member(self):
         self.__click_button_vote()
+        time.sleep(2)
         self.__click_button_za()
         self.__click_button_voting()
 

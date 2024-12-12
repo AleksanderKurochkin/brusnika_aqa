@@ -11,7 +11,7 @@ class PurchasesMenu(UIHelper, metaclass=MetaLocator):
 
     _NEW_PURCHASES = "//span[text() = 'Новая закупка']"
     _GOOD_TENDER = '//div[@class="modal-content"]//span[text() = "Тендер на закупку ТМЦ"]'
-    _WORK_TENDER = '//div[class ="modal-content"]//span[text()="Тендер на оказание работ, услуг"]'
+    _WORK_TENDER = '//div[@class ="modal-content"]//span[text() = "Тендер на оказание работ, услуг"]'
 
     @property
     def open_purchases_menu(self):

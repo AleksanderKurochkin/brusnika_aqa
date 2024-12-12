@@ -1,11 +1,11 @@
-import time
-
-from base.base_test import BaseTest
 import allure
+import pytest
+from base.base_test import BaseTest
 
-@allure.epic("Тест закупки МТР")
+
+@allure.epic("Тест закупок МТР")
 class TestPurchaseGood(BaseTest):
-
+    @pytest.mark.purchas_good_tender
     @allure.title("Закупка ТМЦ: подача двух предложений с выбором победителя")
     def test_create_purchase(self):
         self.frame_page.open()
@@ -76,12 +76,4 @@ class TestPurchaseGood(BaseTest):
         self.purchase_page_organizer.click_button_approve_results_vote()
         self.purchase_page_organizer.click_button_approve_protocol_results()
         self.purchase_page_organizer.click_button_approve()
-
-
-
-
-
-
-
-
 
