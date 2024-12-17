@@ -24,7 +24,6 @@ class VotingPages(BasePage):
     @allure.step("Голосование члена комиссии")
     def voting_committee_member(self):
         self.__click_button_vote()
-        time.sleep(2)
         self.__click_button_za()
         self.__click_button_voting()
 

@@ -20,7 +20,7 @@ class FramePage(BasePage):
 
     @allure.step("Вводим логин и пароль организатора")
     def login_organizer(self):
-        self.click_on_element(self._BUTTON_LOGIN_LOCATOR)
+        self.method_click(self._BUTTON_LOGIN_LOCATOR)
         self.fill(self._FIELD_LOGIN_LOCATOR, Credentials.LOGIN_ORGANIZER)
         self.fill(self._FIELD_PASSWORD_LOCATOR, Credentials.PASSWORD)
         self.click_on_element(self._BUTTON_NEXT_LOCATOR)

@@ -5,7 +5,7 @@ import allure
 
 class CreatePurchaseGoodTender(BasePage):
     # -- Field --
-    _FIELD_TITLE = "//input[@id='mat-input-3']"
+    _FIELD_TITLE = "//um-input-field[contains(@class, 'field_title ')]//input"
     _FIELD_REGION = "//um-combo-box-field[contains(@class, 'destinationRegion')]//input"
     _FIELD_PROCUREMENT_CATEGORY = "//um-combo-box-field[contains(@class, 'procurementClassifier')]//input"
 

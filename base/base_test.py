@@ -8,6 +8,7 @@ from pages.create_purchase_page.create_purchase_work_tender import CreatePurchas
 from pages.purchase_page.purchase_page_organizer import PurchasePageOrganizer
 from pages.purchase_page.purchase_page_participant import PurchasePageParticipant
 from pages.voting_page import VotingPages
+from soap.soap_ui_request import SoapRequests
 
 class BaseTest:
 
@@ -21,7 +22,7 @@ class BaseTest:
         self.purchase_page_organizer = PurchasePageOrganizer(self.driver)
         self.purchase_page_participant = PurchasePageParticipant(self.driver)
         self.voting_page = VotingPages(self.driver)
-
+        self.soap_requests = SoapRequests(self.driver)
 
         self.user_menu = UserMenu(self.driver)
         self.purchase = PurchasesMenu(self.driver)

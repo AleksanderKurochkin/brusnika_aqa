@@ -141,6 +141,13 @@ class UIHelper:
         """
         return self.wait.until(EC.presence_of_element_located(locator), message=message)
 
+    def is_clickable(self, locator):
+        try:
+            self.wait.until(EC.element_to_be_clickable(locator))
+            return True
+        except TimeoutException:
+            return False
+
     # --- Cookies ---
     def save_cookies(self, cookies_name="login-cookies"):
         with open(f"cookies/{cookies_name}.pkl", "wb") as cookies_file:
