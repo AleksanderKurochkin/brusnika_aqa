@@ -8,7 +8,7 @@ class PurchasesMenu(UIHelper, metaclass=MetaLocator):
 
 
     _PURCHASES = "//um-navigation-item[.//span[text()='Закупки']]"
-
+    _MY_PURCHASES = "//um-navigation-item//um-navigation-item-container[.//span[text()='Мои закупки']]"
     _NEW_PURCHASES = "//span[text() = 'Новая закупка']"
     _GOOD_TENDER = '//div[@class="modal-content"]//span[text() = "Тендер на закупку ТМЦ"]'
     _WORK_TENDER = '//div[@class ="modal-content"]//span[text() = "Тендер на оказание работ, услуг"]'
@@ -17,6 +17,10 @@ class PurchasesMenu(UIHelper, metaclass=MetaLocator):
     def open_purchases_menu(self):
         if 'open' not in self.find(self._PURCHASES).get_attribute('class'):
             self.click_on_element(self._PURCHASES)
+        else:
+            pass
+        if 'open' not in self.find(self._MY_PURCHASES).get_attribute('class'):
+            self.click_on_element(self._MY_PURCHASES)
         else:
             pass
         return self

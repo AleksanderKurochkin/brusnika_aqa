@@ -5,7 +5,7 @@ import allure
 
 class CreatePurchaseWorkTender(BasePage):
     # -- Field --
-    _FIELD_TITLE = "//input[@id=(//mat-label[contains(text(), 'Наименование (предмет закупки)')]/ancestor::label/@for)]"
+    _FIELD_TITLE = "//um-input-field[contains(@class, 'field_title ')]//input"
     _FIELD_REGION = "//um-combo-box-field[contains(@class, 'destinationRegion')]//input"
     _FIELD_PROCUREMENT_CATEGORY = "//um-combo-box-field[contains(@class, 'procurementClassifier')]//input"
     _FIELD_EXECUTION_PERIOD = "//um-textarea-field[contains(@class, 'executionPeriod')]//textarea"
@@ -25,6 +25,8 @@ class CreatePurchaseWorkTender(BasePage):
     _TOGGLER_PAYMENT_STAGE_PERIOD_IN_STAGE_BUTTON = "//um-checkbox-field[contains(@class, 'paymentStagesPeriodInTrade')]//span[@class='mat-slide-toggle-content']"
     _TOGGLER_PAYMENT_STAGE_PERCENTS_IN_TRADE_CHECKBOX = "//um-checkbox-field[contains(@class,'paymentStagesPercentsInTrade')]//input"
     _TOGGLER_PAYMENT_STAGE_PERCENTS_IN_TRADE_BUTTON = "//um-checkbox-field[contains(@class, 'paymentStagesPercentsInTrade')]//span[@class='mat-slide-toggle-content']"
+    _TOGGLER_ENABLE_PURCHASE_ITEMS_CHECKBOX = "//um-checkbox-field[contains(@class,'field_enablePurchaseItems')]//input"
+    _TOGGLER_ENABLE_PURCHASE_ITEMS_BUTTON = ""
 
     ##--- Payment Stage---
     _BUTTON_ADD_PAYMENT_STAGE = "//um-grid-field[contains(@class, 'paymentStages')]//span[text() = 'Добавить']"
@@ -52,6 +54,7 @@ class CreatePurchaseWorkTender(BasePage):
     _BUTTON_CONTINUE_WITHOUT_INVITATION = "//span[contains(text(), 'Продолжить без приглашения')]"
     _BUTTON_APPROVE_AND_DECLARE = "//span[contains(text(), 'Утвердить и объявить')]"
     _EDIT_PURCHASE = "Изменение времени"
+    _BUTTON_ADD_LOT = "//button//span[contains(text(),'Добавить')]"
 
     #--Date and time--
     _PARTICIPATION_CONFIRMATION_END_DATE = "//um-date-time-field[contains(@class, 'field_participationConfirmationEndDate')]//input[@formcontrolname='date']"
@@ -180,10 +183,12 @@ class CreatePurchaseWorkTender(BasePage):
         self.add_type_payment_stage()
         self.add_form_payment_stage()
 
-    @allure.step("Создать закупку СМР")
-    def create_purchase_work_tender(self):
-        self.fill_title()
-        self.fill_region()
+    @allure.step("Добавить лот")
+    def add_lot(self):
+        self.click_on_element(self._BUTTON_ADD_LOT)
+
+    @allure.step("Заполнить данные по 1 лоту")
+    def fill_date_for_one_lot(self):
         self.fill_procurement_category()
         self.fill_execution_period()
         self.toggler_enable_price_per_purchase_item_on()
@@ -195,6 +200,13 @@ class CreatePurchaseWorkTender(BasePage):
         self.toggler_payment_stages_percents_in_trade_off()
         self.choice_payment_stage()
         self.fill_guarantee_period()
+
+
+    @allure.step("Создать закупку СМР")
+    def create_purchase_work_tender(self):
+        self.fill_title()
+        self.fill_region()
+        self.fill_date_for_one_lot()
         self.fill_participation_confirmation_end_date()
         self.fill_bid_submission_end_date()
         self.click_approve_button()
