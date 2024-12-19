@@ -55,6 +55,7 @@ class CreatePurchaseWorkTender(BasePage):
     _BUTTON_APPROVE_AND_DECLARE = "//span[contains(text(), 'Утвердить и объявить')]"
     _EDIT_PURCHASE = "Изменение времени"
     _BUTTON_ADD_LOT = "//button//span[contains(text(),'Добавить')]"
+    _BUTTON_SAVE_AND_CONTINUE = "//mat-toolbar//span[contains(text(), 'Сохранить и продолжить')]"
 
     #--Date and time--
     _PARTICIPATION_CONFIRMATION_END_DATE = "//um-date-time-field[contains(@class, 'field_participationConfirmationEndDate')]//input[@formcontrolname='date']"
@@ -173,6 +174,10 @@ class CreatePurchaseWorkTender(BasePage):
     def click_approve_and_declare_button(self):
         self.click_on_element(self._BUTTON_APPROVE_AND_DECLARE)
 
+    @allure.step("Нажать кнопку 'Сохранить и продолжить'")
+    def click_save_and_continue_button(self):
+        self.click_on_element(self._BUTTON_SAVE_AND_CONTINUE)
+
     # @allure.step("Заполнить Обоснование внесения изменений")
     # def fill_edit_purchase(self):
     #     self.fill(self._FIELD_EDIT_PURCHASE, self._EDIT_PURCHASE)
@@ -186,6 +191,8 @@ class CreatePurchaseWorkTender(BasePage):
     @allure.step("Добавить лот")
     def add_lot(self):
         self.click_on_element(self._BUTTON_ADD_LOT)
+
+
 
     @allure.step("Заполнить данные по 1 лоту")
     def fill_date_for_one_lot(self):
