@@ -5,7 +5,7 @@ import allure
 @allure.epic("Тест создания закупок СМР")
 class TestPurchaseWork(BaseTest):
     @pytest.mark.purchas_work_tender
-    @allure.title("Закупка СМР: создание закупки с подгрузкой ведомости через UI")
+    @allure.title("Закупка СМР: создание закупки через UI")
     def test_create_purchase_work_tender(self):
         self.frame_page.open()
         self.frame_page.login_organizer()

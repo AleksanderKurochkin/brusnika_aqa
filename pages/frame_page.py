@@ -1,13 +1,7 @@
-import os.path
-import time
-
 import allure
 from base.base_page import BasePage
-from helpers.UI_helper import UIHelper
 from data.links import Links
 from data.credentials import Credentials
-from base.base_components.user_menu import UserMenu
-from pages.purchase_page.purchase_page_organizer import PurchasePageOrganizer
 
 
 class FramePage(BasePage):
