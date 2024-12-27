@@ -4,6 +4,7 @@ from data.links import Links
 from data.credentials import Credentials
 
 
+
 class FramePage(BasePage):
     _PAGE_URL = Links.FRAME_LINK
 
