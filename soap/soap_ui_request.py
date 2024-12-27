@@ -4,12 +4,13 @@ import requests
 import allure
 import xml.etree.ElementTree as ET
 from base.base_page import BasePage
+from data.links import Links
 faker = Faker()
 
 
 @allure.epic("SOAP Requests")
 class SoapRequests(BasePage):
-    URL = "https://brusnika-qa.demo.ultimeta.ru/ws/brusnika-1c"
+    URL = Links.URL_XML
     headers = {"Content-Type": "text/xml; charset=utf-8"}
     auth = ("test", "test")
     _PAGE_URL = None
@@ -109,9 +110,8 @@ class SoapRequests(BasePage):
         return self._TRADES_URL
 
     def get_url_purchase(self):
-        with allure.step(f"Получаем ID закупки: {self._PAGE_URL}"):
+        with allure.step(f"Получаем ID закупки: {self._TRADES_URL}"):
             self._PAGE_URL = f"https://brusnika-qa.demo.ultimeta.ru{self._TRADES_URL}"
-            print(self._PAGE_URL)
             return self._PAGE_URL
 
     @allure.title("Upload project classifier request")

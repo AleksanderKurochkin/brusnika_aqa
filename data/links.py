@@ -9,6 +9,8 @@ class Links:
     FRAME_LINK = f'{HOST}/frame/index.html'
     PROFILE_LINK = f'{HOST}/users/profile'
 
+    URL_XML = f'{HOST}:443/ws/brusnika-1c'
+
 
 
 
